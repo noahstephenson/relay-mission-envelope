@@ -9,7 +9,7 @@ The proposed story is a traceable mission need, a compact architecture, and a ph
 | Section | Existing material | What is still needed |
 |---|---|---|
 | Problem and scope | Mission, needs, six alternatives | Explain difference from Noah's earlier relay work |
-| Architecture | Logical/physical allocations, interfaces | Noah's acceptance and polished OV-1 |
+| Architecture | Accepted logical/physical allocations and interfaces | Optional polished OV-1 |
 | Methods | Energy ledger, link screen, selection rule | Reviewed physical assumptions and source basis |
 | Physical result | Assisted algebra and executable checks | Michael's derivation/domain/error analysis |
 | Results | Provisional six-option table and sweeps | Reviewed boundary figure and honest interpretation |

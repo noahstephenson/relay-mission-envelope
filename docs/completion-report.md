@@ -36,14 +36,11 @@ The generated baseline still reports B2-S2 as near the modeled energy boundary a
 - Michael: complete issues 10-12 by reviewing the algebra, assessing physical evidence/domain limits and deriving justified uncertainty or an unresolved result.
 - Noah/Codex after Michael's handback: integrate only justified physics changes, rerun the pipeline and decide whether the result supports a short technical case study or publication draft.
 
-## Final artifact
-
 ## Limitations
 
 - GitHub repository and issue tracking are intended as the live handoff; no publication submission, deployment or external release beyond GitHub is implied.
 - Diagram SVG/PNG exports were not rerendered because Mermaid sources were not changed; the existing exports remain the included rendered set.
 - No physical evidence was invented or marked accepted. Prepared algebra, figures and templates remain assistant scaffolding until reviewed.
-- Token-saver/Ollama was not used; the needed work was narrow enough to verify directly from repository outputs.
 
 
 

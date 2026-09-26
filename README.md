@@ -2,7 +2,7 @@
 
 Which battery and relay station can provide temporary communications and still bring the aircraft home with reserve?
 
-This repository contains the accepted Noah systems-engineering baseline: a Mermaid architecture package, a reproducible six-option analysis, and Michael's prepared physics handoff. All numerical inputs remain illustrative until Michael completes the physical evidence and uncertainty review.
+This repository contains the accepted Noah systems-engineering baseline: a Mermaid architecture package, a reproducible six-option analysis, and Michael's prepared physics handoff. The current numerical inputs are illustrative. Michael's review will establish which physical claims the evidence can support.
 
 **Open [Diagram_Book.html](Diagram_Book.html)** for the complete offline reading copy. The [Markdown diagram book](docs/diagram-book.md) contains the same 17 views as editable Mermaid code blocks. Individual `.mmd`, SVG and PNG files are included.
 

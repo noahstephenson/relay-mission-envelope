@@ -41,6 +41,6 @@ def build():
     (out/'worked-example.md').write_text('\n'.join(worked)+'\n',encoding='utf-8')
     files=sorted([*ROOT.glob('src/**/*.py'),*ROOT.glob('scripts/*.py'),*ROOT.glob('physics/*.py'),*ROOT.glob('tests/*.py'),ROOT/'config/baseline.json',ROOT/'model/architecture.json'])
     manifest={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
-    (out/'source-provenance.json').write_text(json.dumps({'python':platform.python_version(),'matplotlib':matplotlib.__version__,'git_commit':None,'note':'No repository commit yet; source bytes identified individually','files_sha256':manifest},indent=2)+'\n',encoding='utf-8')
+    (out/'source-provenance.json').write_text(json.dumps({'python':platform.python_version(),'matplotlib':matplotlib.__version__,'git_commit':None,'note':'Source bytes identified individually; the working tree may differ from HEAD','files_sha256':manifest},indent=2)+'\n',encoding='utf-8')
     print('Built decision boundaries, brief, worked case and source provenance')
 if __name__=='__main__':build()

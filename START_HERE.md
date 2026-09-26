@@ -29,7 +29,7 @@ On 2026-09-26 this completed on Windows after making generated text writes expli
 
 Noah's mission, architecture, requirements and baseline acceptance are complete for repository handoff. Michael reviews and advances the prepared physical derivation, establishes evidence/domain limits, and quantifies decision uncertainty. Read [baseline acceptance](docs/baseline-acceptance.md), [architecture acceptance](docs/architecture-acceptance.md), [Noah completion](docs/noah-completion.md), [work packages](docs/work-packages.md), [issues](docs/issues.md), and [completion report](docs/completion-report.md).
 
-The baseline retains its no-feasible-option result at 900 s; do not tune assumptions to manufacture a winner. No remote issues or submission have been created.
+The baseline retains its no-feasible-option result at 900 s; do not tune assumptions to manufacture a winner. GitHub issues 10–12 track Michael's remaining work, and issue 13 tracks integration after his handback. No submission has been made.
 
 ## Give Codex this instruction
 

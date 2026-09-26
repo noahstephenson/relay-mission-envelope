@@ -25,7 +25,7 @@ Records: `results/test-report.txt`, `acceptance-cases.json`, `model-validation.j
 
 Mermaid rendering used mermaid-cli 12.0.0. `scripts/render_diagrams.py` is optional; the calculation pipeline does not require Node or a diagram renderer. The supplied browser launch configuration was environment-specific and is not a required user setting.
 
-Noah's architecture acceptance remains open. All diagram assembly is complete. Michael's derivation review, physical evidence and uncertainty result remain open. A verify relation and a successful numerical fixture are distinct from a demonstrated system requirement.
+Noah accepted the assembled architecture in `docs/architecture-acceptance.md`. Michael's derivation review, physical evidence and uncertainty result remain open. A verify relation and a successful numerical fixture are distinct from a demonstrated system requirement.
 
 The scenario fixtures deliberately encode the supplied baseline and its expected results. If a reviewed change alters mission assumptions, preserve the prior outputs and update the relevant fixtures with a documented reason. Do not tune the baseline to satisfy a preferred result.
 

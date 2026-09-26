@@ -1,6 +1,6 @@
-# Remaining work packages
+# Work packages and handoff
 
-What should Codex, Noah and Michael actually do next?
+Which packages are complete, and what remains?
 
 The implemented calculation and model registry are the starting baseline. These work packages close specific remaining gaps. They do not authorize a new platform or broader research program.
 
@@ -10,7 +10,7 @@ The implemented calculation and model registry are the starting baseline. These 
 
 **Already prepared:** four stakeholder needs, five use cases, six functions, four logical responsibilities, six airborne physical groups, five top-level interfaces and a six-option comparison.
 
-**Do:** read the ten-minute walkthrough; accept or deliberately revise the scenario, boundaries, reserve and selector; identify where illustrative hardware should remain conceptual. Reconcile the proposed operator decisions with the model's limited calculation claims.
+**Accepted:** Noah reviewed the scenario, boundaries, reserve and selector. Illustrative hardware remains conceptual, and the modeled result does not claim operational performance.
 
 **Return:** completed in `docs/baseline-acceptance.md`, naming accepted choices and outstanding evidence.
 
@@ -22,7 +22,7 @@ The implemented calculation and model registry are the starting baseline. These 
 
 **Already built:** 17 SysML-style views covering the complete intended architecture, with editable sources and SVG/PNG exports. Requirements, use cases, functions, block composition, interfaces, states, constraints and decision logic are assembled.
 
-**Do:** review the book, resolve any architecture comments, and update affected sources and registry records together. Keep the diagrams simple and readable.
+**Accepted:** Noah reviewed the book and accepted the architecture. Future changes to architecture meaning should update affected sources and registry records together.
 
 **Return:** completed in `docs/architecture-acceptance.md`.
 

@@ -1,6 +1,6 @@
-# Local issue backlog
+# Issues and local copies
 
-These are issue bodies ready to paste into GitHub. No remote issues have been created by this file itself. "Prepared" means assistant-built; Noah-owned baseline acceptance is now recorded in the repository, while Michael-owned physical judgment remains open.
+These files mirror the GitHub issues. Noah's baseline acceptance is recorded in the repository. Michael's physical review remains open in issues 10–12; issue 13 covers integration after his handback.
 
 | Issue | Owner | State |
 |---|---|---|

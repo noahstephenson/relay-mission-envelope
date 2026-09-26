@@ -11,7 +11,7 @@ These are analyst-defined requirements for a conceptual study. Numeric screens u
 | R3 | For each option, planned mission energy plus reserve shall not exceed nominal_energy_wh times usable_fraction. Reserve is reserve_fraction of usable energy. | conditional calculation |
 | R4 | For each option, installed gross mass shall not exceed vehicle.max_gross_mass_kg (baseline 5.5 kg). | assumed ceiling |
 | R5 | For each option, the highest modeled segment bus demand shall not exceed vehicle.continuous_bus_limit_w (baseline 1400 W). Transients remain unassessed. | assumed ceiling |
-| R6 | The architecture shall specify I1–I5, their load and connection assumptions, and evidence gaps before a configuration is accepted for physical implementation. | documentation review pending; hardware unassessed |
+| R6 | The architecture shall specify I1–I5, their load and connection assumptions, and evidence gaps before a configuration is accepted for physical implementation. | architecture accepted; hardware unassessed |
 | R7 | The study shall report pack and gross mass, usable and reserve energy, energy margin and maximum supported dwell for each of the six options. | artifact inspection |
 | R8 | Each generated study shall preserve resolved inputs and their SHA-256, state provisional physics and evidence status, and identify the calculation source. | artifact inspection |
 
@@ -38,8 +38,8 @@ Numerical R1–R5 pass/fail is conditional on assumed inputs. R6 is never promot
 | R3 | Independent segment ledger and reserve equality/shortfall check | Noah calculation; Michael physical review | Numerical fixtures and full six-segment ledger | Physical power/usable-energy support and justified discrepancy |
 | R4 | Installed mass summation and declared ceiling check | Noah | Component breakdown and mass gate tests | Evidence for selected installation and actual mass ceiling |
 | R5 | Maximum segment bus-demand comparison | Noah interfaces; Michael demand model | Independent power-gate test and per-option surplus | Supply capability evidence; transients remain outside calculation |
-| R6 | Inspect interface definitions, assumptions and evidence gaps | Noah | Typed registry and interface register | Human acceptance; physical compatibility evidence |
-| R7 | Inspect six generated records for complete comparison fields | Noah / Codex | comparison.csv and baseline.json | Noah review of decision usefulness; no flight claim |
+| R6 | Inspect interface definitions, assumptions and evidence gaps | Noah | Typed registry, interface register and architecture acceptance | Physical compatibility evidence before implementation |
+| R7 | Inspect six generated records for complete comparison fields | Noah / Codex | comparison.csv, baseline.json and baseline acceptance | Preserve the six-option record after reviewed changes; no flight claim |
 | R8 | Reproduce outputs; compare input/source hashes and status | Noah / Codex | Resolved inputs, source provenance, extracted-archive check | Preserve provenance when actual reviewed changes are integrated |
 
 The [mission gap table](../results/mission-gap.md) reports capability against fixed demand. The [MBSE method](mbse-method.md) explains why requirement intent, calculation verification, physical evidence and mission validation remain separate.
