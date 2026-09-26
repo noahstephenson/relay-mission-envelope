@@ -1,0 +1,6 @@
+flowchart TD
+    P1["battery: P1"] -->|"I1 Main DC supply"| P2["distribution: P2"]
+    P2 -->|"I1 Propulsion supply"| P4["propulsion: P4"]
+    P2 -->|"I1 Avionics supply"| P3["avionics: P3"]
+    P2 -->|"I2 Regulated payload supply"| P5["relay: P5"]
+    P3 -.->|"IF6 Flight commands"| P4

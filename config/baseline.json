@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "default_status": "illustrative assumption; no hardware selected or validated",
+    "author": "assistant-prepared for Noah review",
+    "physics_review_status": "pending Michael",
+    "measurement_boundary": "reference power is propulsion electrical input at main bus; auxiliaries excluded",
+    "coordinate_system": "local ENU meters; flat ground z=0",
+    "radio_basis": "one-way A to relay to B; identical hop radios; scheduling/throughput assumed",
+    "source_note": "No numerical value is taken from a manufacturer. See docs/assumptions.md."
+  },
+  "vehicle": {
+    "mass_components_kg": {
+      "structure_and_landing": 1.4,
+      "propulsion": 0.8,
+      "avionics": 0.2,
+      "relay_and_antennas": 0.35,
+      "distribution_and_mounts": 0.25
+    },
+    "nonbattery_mass_kg": 3.0,
+    "max_gross_mass_kg": 5.5,
+    "continuous_bus_limit_w": 1400,
+    "avionics_power_w": 12,
+    "payload_load_w": 18,
+    "regulator_efficiency": 0.9,
+    "rotor_count": 4,
+    "rotor_radius_m": 0.2,
+    "bus_voltage_v": 22.2
+  },
+  "batteries": [
+    {
+      "id": "B1",
+      "battery_mass_kg": 1.0,
+      "mount_delta_kg": 0,
+      "nominal_energy_wh": 220,
+      "voltage_v": 22.2
+    },
+    {
+      "id": "B2",
+      "battery_mass_kg": 1.7,
+      "mount_delta_kg": 0.1,
+      "nominal_energy_wh": 360,
+      "voltage_v": 22.2
+    }
+  ],
+  "mission": {
+    "base_m": [
+      0,
+      0,
+      0
+    ],
+    "endpoints_m": [
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1200,
+        0,
+        2
+      ]
+    ],
+    "dwell_s": 900,
+    "establish_s": 30,
+    "transit_speed_mps": 10,
+    "climb_speed_mps": 3,
+    "descent_speed_mps": 2,
+    "usable_fraction": 0.9,
+    "reserve_fraction": 0.2
+  },
+  "stations": [
+    {
+      "id": "S1",
+      "role": "convenient",
+      "position_m": [
+        250,
+        0,
+        50
+      ]
+    },
+    {
+      "id": "S2",
+      "role": "balanced",
+      "position_m": [
+        600,
+        0,
+        100
+      ]
+    },
+    {
+      "id": "S3",
+      "role": "elevated",
+      "position_m": [
+        700,
+        0,
+        150
+      ]
+    }
+  ],
+  "obstacle": {
+    "x_m": 600,
+    "top_z_m": 35,
+    "clearance_m": 5,
+    "description": "infinitely thin wall across all north coordinates; straight-ray clearance only"
+  },
+  "radio": {
+    "frequency_hz": 2400000000.0,
+    "tx_power_dbm": 20,
+    "tx_gain_dbi": 2,
+    "rx_gain_dbi": 2,
+    "misc_loss_db": 2,
+    "receiver_threshold_dbm": -90,
+    "required_margin_db": 10
+  },
+  "physics": {
+    "reference_power_w": 600,
+    "reference_mass_kg": 4,
+    "mass_domain_kg": [
+      3,
+      5.5
+    ],
+    "domain_status": "assumed analysis range, not experimentally supported",
+    "segment_factors": {
+      "climb": 1.25,
+      "outbound": 1.1,
+      "establish": 1,
+      "relay": 1,
+      "return": 1.1,
+      "descent": 0.85
+    },
+    "sensitivity_power_multipliers": [
+      0.9,
+      1,
+      1.1
+    ]
+  },
+  "experiment": {
+    "dwell_sweep_s": [
+      0,
+      300,
+      600,
+      900,
+      1200,
+      1500,
+      1800
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+flowchart LR
+    subgraph INPUT["Case values"]
+      EN["nominalEnergy: Wh"]
+      U["usableFraction: 1"]
+      R["reserveFraction: 1"]
+      EM["missionEnergy: Wh"]
+    end
+    EN ---|"nominal"| CB4["CB4 ReserveAccounting"]
+    U ---|"usableFraction"| CB4
+    R ---|"reserveFraction"| CB4
+    EM ---|"mission"| CB4
+    CB4 ---|"usable"| EU["usableEnergy: Wh"]
+    CB4 ---|"reserve"| ER["reserveEnergy: Wh"]
+    CB4 ---|"margin"| M["energyMargin: Wh"]

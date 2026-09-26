@@ -1,0 +1,121 @@
+[
+  {
+    "id": "D01",
+    "source": "diagrams/d01-mission-context.mmd",
+    "source_sha256": "dc077823f0f3db9b60e8c2095dc0a649122ba221c4cbe26432c70f2bef0807e4",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D02",
+    "source": "diagrams/d02-service-requirements.mmd",
+    "source_sha256": "96a3e4aa69b45ec069a635e538106f9b2719cc06242e2cf29cd0bc3a57350991",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D03",
+    "source": "diagrams/d03-recovery-requirements.mmd",
+    "source_sha256": "07f408961044e41020c32c26a0310e0b928cc18b65a8e3643cab9cf27a04bcaf",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D04",
+    "source": "diagrams/d04-interface-and-evidence-requirements.mmd",
+    "source_sha256": "d0e474809943527aa0a5d9aeeea93ec7eba272984761a3acf1faf0f8763d0b85",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D05",
+    "source": "diagrams/d05-operational-use-cases.mmd",
+    "source_sha256": "7287a793ed9f48136c4c85dd4a6495a814592780198005d6835b7220c40ebebe",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D06",
+    "source": "diagrams/d06-mission-functions.mmd",
+    "source_sha256": "6e39ecf8993840ae25d224aa332101b4a03d2d5b2587bf094270234402f66bb1",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D07",
+    "source": "diagrams/d07-logical-blocks.mmd",
+    "source_sha256": "f434f106793860e08b0ae90bb38439e9ee0ca8938ba939e10152e26b72b667de",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D08",
+    "source": "diagrams/d08-physical-composition.mmd",
+    "source_sha256": "7902198d84452b87b30d4e869f10aa1573093e1c7c09e09941b75e21af0be550",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D09",
+    "source": "diagrams/d09-airborne-interfaces.mmd",
+    "source_sha256": "35c73ee02ba263bc46a5972268c455d4f0a34d29470bc1473b51e4761dc4bff3",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D10",
+    "source": "diagrams/d10-service-and-carrier-interfaces.mmd",
+    "source_sha256": "c20e9c9838761b96db55401cfa8fe894a41ec056626684c818b7fd6f83c44914",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D11",
+    "source": "diagrams/d11-mission-lifecycle.mmd",
+    "source_sha256": "497aaeb3a919bdfd9c3f8eb163d537656bdfeaee224f070f45a17761555a8e84",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D12",
+    "source": "diagrams/d12-installed-mass-constraint.mmd",
+    "source_sha256": "1a6217bf6ae47f08af344c69b3867cf83a3138b1f668d9c193eeb0ad9c72ce95",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D13",
+    "source": "diagrams/d13-energy-and-reserve-constraint.mmd",
+    "source_sha256": "c624440f20fb8b2c7294fa2912b730254baf7a659a9dc074a98d626281fddd40",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D14",
+    "source": "diagrams/d14-supported-dwell-constraint.mmd",
+    "source_sha256": "7f852b3729cec277ce58e28df585a1374544b509755e2b4b8c47529b359bdde6",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D15",
+    "source": "diagrams/d15-configuration-decision.mmd",
+    "source_sha256": "33939aed2c9084b027e971611348d18ff6b29c36a1235d9f3e0f68dc6d790932",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D16",
+    "source": "diagrams/d16-propulsion-power-constraint.mmd",
+    "source_sha256": "b1daee5fdc83a671edc9a4a110aebd7b5e49831b5a086db0331ceae9e7f2abe3",
+    "element_references": "PASS",
+    "rendered": true
+  },
+  {
+    "id": "D17",
+    "source": "diagrams/d17-segment-energy-constraint.mmd",
+    "source_sha256": "847a435abf47b8ad604d24561a68b014e420ec24eab27ac2f8b40cbb6555920e",
+    "element_references": "PASS",
+    "rendered": true
+  }
+]

@@ -1,0 +1,25 @@
+test_complete_registry (test_architecture.ArchitectureTests.test_complete_registry) ... ok
+test_dangling_relation_rejected (test_architecture.ArchitectureTests.test_dangling_relation_rejected) ... ok
+test_requirement_verify_direction_rejected (test_architecture.ArchitectureTests.test_requirement_verify_direction_rejected) ... ok
+test_wrong_binding_type_rejected (test_architecture.ArchitectureTests.test_wrong_binding_type_rejected) ... ok
+test_wrong_nested_occurrence_rejected (test_architecture.ArchitectureTests.test_wrong_nested_occurrence_rejected) ... ok
+test_wrong_port_direction_rejected (test_architecture.ArchitectureTests.test_wrong_port_direction_rejected) ... ok
+test_energy_boundary_changes_decision (test_decisions.DecisionTests.test_energy_boundary_changes_decision) ... ok
+test_mass_and_power_gates_fail_independently (test_decisions.DecisionTests.test_mass_and_power_gates_fail_independently) ... ok
+test_nonpositive_multiplier_rejected (test_decisions.DecisionTests.test_nonpositive_multiplier_rejected) ... ok
+test_relaxed_dwell_retains_same_architecture (test_decisions.DecisionTests.test_relaxed_dwell_retains_same_architecture) ... ok
+test_tie_break_order (test_decisions.DecisionTests.test_tie_break_order) ... ok
+test_clearance_cases (test_model.ModelTests.test_clearance_cases) ... ok
+test_deterministic_and_outside_domain (test_model.ModelTests.test_deterministic_and_outside_domain) ... ok
+test_independent_energy_ledger (test_model.ModelTests.test_independent_energy_ledger) ... ok
+test_invalid_input (test_model.ModelTests.test_invalid_input) ... ok
+test_link_arithmetic (test_model.ModelTests.test_link_arithmetic) ... ok
+test_mass_power_and_return (test_model.ModelTests.test_mass_power_and_return) ... ok
+test_no_feasible_and_negative_dwell (test_model.ModelTests.test_no_feasible_and_negative_dwell) ... ok
+test_reserve_equality_and_shortfall (test_model.ModelTests.test_reserve_equality_and_shortfall) ... ok
+test_shared_power_increase_reduces_margin (test_model.ModelTests.test_shared_power_increase_reduces_margin) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.015s
+
+OK

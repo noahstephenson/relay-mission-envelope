@@ -1,0 +1,17 @@
+id,owner_id,name,type_id,multiplicity,aggregation
+LP1,L0,logical1,L1,1,composite
+LP2,L0,logical2,L2,1,composite
+LP3,L0,logical3,L3,1,composite
+LP4,L0,logical4,L4,1,composite
+CP1,CTX,system,SYS,1,reference
+CP2,CTX,endpointA,EA,1,reference
+CP3,CTX,endpointB,EB,1,reference
+CP4,CTX,environment,ENV,1,reference
+SP1,SYS,aircraft,AIR,1,composite
+SP2,SYS,operatorSupport,OP,1,composite
+AP1,AIR,battery,P1,1,composite
+AP2,AIR,distribution,P2,1,composite
+AP3,AIR,avionics,P3,1,composite
+AP4,AIR,propulsion,P4,1,composite
+AP5,AIR,relay,P5,1,composite
+AP6,AIR,structure,P6,1,composite

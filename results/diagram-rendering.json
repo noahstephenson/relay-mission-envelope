@@ -1,0 +1,138 @@
+[
+  {
+    "id": "D01",
+    "name": "d01-mission-context",
+    "source_sha256": "dc077823f0f3db9b60e8c2095dc0a649122ba221c4cbe26432c70f2bef0807e4",
+    "svg": "assets/diagrams/d01-mission-context.svg",
+    "png": "assets/diagrams/d01-mission-context.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D02",
+    "name": "d02-service-requirements",
+    "source_sha256": "96a3e4aa69b45ec069a635e538106f9b2719cc06242e2cf29cd0bc3a57350991",
+    "svg": "assets/diagrams/d02-service-requirements.svg",
+    "png": "assets/diagrams/d02-service-requirements.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D03",
+    "name": "d03-recovery-requirements",
+    "source_sha256": "07f408961044e41020c32c26a0310e0b928cc18b65a8e3643cab9cf27a04bcaf",
+    "svg": "assets/diagrams/d03-recovery-requirements.svg",
+    "png": "assets/diagrams/d03-recovery-requirements.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D04",
+    "name": "d04-interface-and-evidence-requirements",
+    "source_sha256": "d0e474809943527aa0a5d9aeeea93ec7eba272984761a3acf1faf0f8763d0b85",
+    "svg": "assets/diagrams/d04-interface-and-evidence-requirements.svg",
+    "png": "assets/diagrams/d04-interface-and-evidence-requirements.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D05",
+    "name": "d05-operational-use-cases",
+    "source_sha256": "7287a793ed9f48136c4c85dd4a6495a814592780198005d6835b7220c40ebebe",
+    "svg": "assets/diagrams/d05-operational-use-cases.svg",
+    "png": "assets/diagrams/d05-operational-use-cases.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D06",
+    "name": "d06-mission-functions",
+    "source_sha256": "6e39ecf8993840ae25d224aa332101b4a03d2d5b2587bf094270234402f66bb1",
+    "svg": "assets/diagrams/d06-mission-functions.svg",
+    "png": "assets/diagrams/d06-mission-functions.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D07",
+    "name": "d07-logical-blocks",
+    "source_sha256": "f434f106793860e08b0ae90bb38439e9ee0ca8938ba939e10152e26b72b667de",
+    "svg": "assets/diagrams/d07-logical-blocks.svg",
+    "png": "assets/diagrams/d07-logical-blocks.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D08",
+    "name": "d08-physical-composition",
+    "source_sha256": "7902198d84452b87b30d4e869f10aa1573093e1c7c09e09941b75e21af0be550",
+    "svg": "assets/diagrams/d08-physical-composition.svg",
+    "png": "assets/diagrams/d08-physical-composition.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D09",
+    "name": "d09-airborne-interfaces",
+    "source_sha256": "35c73ee02ba263bc46a5972268c455d4f0a34d29470bc1473b51e4761dc4bff3",
+    "svg": "assets/diagrams/d09-airborne-interfaces.svg",
+    "png": "assets/diagrams/d09-airborne-interfaces.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D10",
+    "name": "d10-service-and-carrier-interfaces",
+    "source_sha256": "c20e9c9838761b96db55401cfa8fe894a41ec056626684c818b7fd6f83c44914",
+    "svg": "assets/diagrams/d10-service-and-carrier-interfaces.svg",
+    "png": "assets/diagrams/d10-service-and-carrier-interfaces.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D11",
+    "name": "d11-mission-lifecycle",
+    "source_sha256": "497aaeb3a919bdfd9c3f8eb163d537656bdfeaee224f070f45a17761555a8e84",
+    "svg": "assets/diagrams/d11-mission-lifecycle.svg",
+    "png": "assets/diagrams/d11-mission-lifecycle.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D12",
+    "name": "d12-installed-mass-constraint",
+    "source_sha256": "1a6217bf6ae47f08af344c69b3867cf83a3138b1f668d9c193eeb0ad9c72ce95",
+    "svg": "assets/diagrams/d12-installed-mass-constraint.svg",
+    "png": "assets/diagrams/d12-installed-mass-constraint.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D13",
+    "name": "d13-energy-and-reserve-constraint",
+    "source_sha256": "c624440f20fb8b2c7294fa2912b730254baf7a659a9dc074a98d626281fddd40",
+    "svg": "assets/diagrams/d13-energy-and-reserve-constraint.svg",
+    "png": "assets/diagrams/d13-energy-and-reserve-constraint.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D14",
+    "name": "d14-supported-dwell-constraint",
+    "source_sha256": "7f852b3729cec277ce58e28df585a1374544b509755e2b4b8c47529b359bdde6",
+    "svg": "assets/diagrams/d14-supported-dwell-constraint.svg",
+    "png": "assets/diagrams/d14-supported-dwell-constraint.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D15",
+    "name": "d15-configuration-decision",
+    "source_sha256": "33939aed2c9084b027e971611348d18ff6b29c36a1235d9f3e0f68dc6d790932",
+    "svg": "assets/diagrams/d15-configuration-decision.svg",
+    "png": "assets/diagrams/d15-configuration-decision.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D16",
+    "name": "d16-propulsion-power-constraint",
+    "source_sha256": "b1daee5fdc83a671edc9a4a110aebd7b5e49831b5a086db0331ceae9e7f2abe3",
+    "svg": "assets/diagrams/d16-propulsion-power-constraint.svg",
+    "png": "assets/diagrams/d16-propulsion-power-constraint.png",
+    "status": "rendered; inspection recorded in verification report"
+  },
+  {
+    "id": "D17",
+    "name": "d17-segment-energy-constraint",
+    "source_sha256": "847a435abf47b8ad604d24561a68b014e420ec24eab27ac2f8b40cbb6555920e",
+    "svg": "assets/diagrams/d17-segment-energy-constraint.svg",
+    "png": "assets/diagrams/d17-segment-energy-constraint.png",
+    "status": "rendered; inspection recorded in verification report"
+  }
+]

@@ -1,0 +1,108 @@
+{
+  "input_sha256": "c8737d4466ed1a594c961bbae14c2033ff55bd3a7cf313b91aa5b0078b24e12e",
+  "interpretation": "Positive surplus meets the corresponding numeric screen; zero meets equality; negative is a shortfall. Missing obstacle intersection is not a measured clearance. Dwell is an energy proxy, not demonstrated service.",
+  "options": [
+    {
+      "option_id": "B1-S1",
+      "required_dwell_s": 900,
+      "calculated_energy_dwell_s": 775.4694092827004,
+      "dwell_surplus_s": -124.53059071729956,
+      "energy_surplus_wh": -21.862037037037027,
+      "link_surplus_db": 2.38244682517373,
+      "clearance_surplus_m": -7.684210526315788,
+      "mass_surplus_kg": 1.5,
+      "power_surplus_w": 618.0,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "evidence_status": "conditional on illustrative inputs; hardware and physical validation pending"
+    },
+    {
+      "option_id": "B1-S2",
+      "required_dwell_s": 900,
+      "calculated_energy_dwell_s": 656.7616033755274,
+      "dwell_surplus_s": -243.23839662447256,
+      "energy_surplus_wh": -42.70185185185184,
+      "link_surplus_db": 6.270625317090847,
+      "clearance_surplus_m": 60.0,
+      "mass_surplus_kg": 1.5,
+      "power_surplus_w": 618.0,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R2",
+        "R3"
+      ],
+      "evidence_status": "conditional on illustrative inputs; hardware and physical validation pending"
+    },
+    {
+      "option_id": "B1-S3",
+      "required_dwell_s": 900,
+      "calculated_energy_dwell_s": 592.8006329113925,
+      "dwell_surplus_s": -307.19936708860746,
+      "energy_surplus_wh": -53.93055555555554,
+      "link_surplus_db": 4.856106712630137,
+      "clearance_surplus_m": 88.85714285714283,
+      "mass_surplus_kg": 1.5,
+      "power_surplus_w": 618.0,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R2",
+        "R3"
+      ],
+      "evidence_status": "conditional on illustrative inputs; hardware and physical validation pending"
+    },
+    {
+      "option_id": "B2-S1",
+      "required_dwell_s": 900,
+      "calculated_energy_dwell_s": 1010.0801137647776,
+      "dwell_surplus_s": 110.0801137647776,
+      "energy_surplus_wh": 25.09583447681277,
+      "link_surplus_db": 2.38244682517373,
+      "clearance_surplus_m": -7.684210526315788,
+      "mass_surplus_kg": 0.7000000000000002,
+      "power_surplus_w": 382.0993964907011,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R1"
+      ],
+      "evidence_status": "conditional on illustrative inputs; hardware and physical validation pending"
+    },
+    {
+      "option_id": "B2-S2",
+      "required_dwell_s": 900,
+      "calculated_energy_dwell_s": 891.2859572441411,
+      "dwell_surplus_s": -8.71404275585894,
+      "energy_surplus_wh": -1.9866092716092112,
+      "link_surplus_db": 6.270625317090847,
+      "clearance_surplus_m": 60.0,
+      "mass_surplus_kg": 0.7000000000000002,
+      "power_surplus_w": 382.0993964907011,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R2",
+        "R3"
+      ],
+      "evidence_status": "conditional on illustrative inputs; hardware and physical validation pending"
+    },
+    {
+      "option_id": "B2-S3",
+      "required_dwell_s": 900,
+      "calculated_energy_dwell_s": 827.2968500632596,
+      "dwell_surplus_s": -72.70314993674037,
+      "energy_surplus_wh": -16.574712310473103,
+      "link_surplus_db": 4.856106712630137,
+      "clearance_surplus_m": 88.85714285714283,
+      "mass_surplus_kg": 0.7000000000000002,
+      "power_surplus_w": 382.0993964907011,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R2",
+        "R3"
+      ],
+      "evidence_status": "conditional on illustrative inputs; hardware and physical validation pending"
+    }
+  ]
+}

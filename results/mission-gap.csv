@@ -1,0 +1,7 @@
+option_id,required_dwell_s,calculated_energy_dwell_s,dwell_surplus_s,energy_surplus_wh,link_surplus_db,clearance_surplus_m,mass_surplus_kg,power_surplus_w,assessed_gates_pass,failed_requirements,evidence_status
+B1-S1,900,775.4694092827004,-124.53059071729956,-21.862037037037027,2.38244682517373,-7.684210526315788,1.5,618.0,False,R1;R2;R3,conditional on illustrative inputs; hardware and physical validation pending
+B1-S2,900,656.7616033755274,-243.23839662447256,-42.70185185185184,6.270625317090847,60.0,1.5,618.0,False,R2;R3,conditional on illustrative inputs; hardware and physical validation pending
+B1-S3,900,592.8006329113925,-307.19936708860746,-53.93055555555554,4.856106712630137,88.85714285714283,1.5,618.0,False,R2;R3,conditional on illustrative inputs; hardware and physical validation pending
+B2-S1,900,1010.0801137647776,110.0801137647776,25.09583447681277,2.38244682517373,-7.684210526315788,0.7000000000000002,382.0993964907011,False,R1,conditional on illustrative inputs; hardware and physical validation pending
+B2-S2,900,891.2859572441411,-8.71404275585894,-1.9866092716092112,6.270625317090847,60.0,0.7000000000000002,382.0993964907011,False,R2;R3,conditional on illustrative inputs; hardware and physical validation pending
+B2-S3,900,827.2968500632596,-72.70314993674037,-16.574712310473103,4.856106712630137,88.85714285714283,0.7000000000000002,382.0993964907011,False,R2;R3,conditional on illustrative inputs; hardware and physical validation pending

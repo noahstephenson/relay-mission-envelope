@@ -1,0 +1,7 @@
+flowchart TD
+    R3["R3 Mission energy plus reserve"] -->|"deriveReqt"| N2["N2 Recoverable sortie"]
+    R4["R4 Gross mass ceiling"] -->|"deriveReqt"| N2
+    R5["R5 Continuous bus limit"] -->|"deriveReqt"| N2
+    TC3["TC3 Ledger and reserve boundary"] -.->|"verify intent"| R3
+    TC4["TC4 Installed mass check"] -.->|"verify intent"| R4
+    TC5["TC5 Segment power check"] -.->|"verify intent"| R5

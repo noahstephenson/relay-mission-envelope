@@ -1,0 +1,7 @@
+flowchart TD
+    H["hoverPower: W"] --- BUS["busPower = hoverPower x segmentFactor + auxiliaryPower"]
+    K["segmentFactor: 1"] --- BUS
+    AUX["auxiliaryPower = avionics + payload / efficiency"] --- BUS
+    BUS ---|"busPowerW"| CB3["CB3 SegmentEnergy"]
+    T["segmentDuration: s"] ---|"durationSeconds"| CB3
+    CB3 ---|"energyWh"| E["segmentEnergy: Wh"]

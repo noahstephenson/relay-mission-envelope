@@ -1,0 +1,175 @@
+case_id,property_id,owner_type_id,property_name,type_id,value,source,source_path,status
+B1-S1,VP01,AIR,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B1-S1,VP02,AIR,maximumGrossMass,VT1,5.5,config,vehicle.max_gross_mass_kg,illustrative input
+B1-S1,VP03,P1,batteryMass,VT1,1.0,battery,battery_mass_kg,illustrative input
+B1-S1,VP04,P6,mountIncrement,VT1,0,battery,mount_delta_kg,illustrative input
+B1-S1,VP05,P1,nominalEnergy,VT3,220,battery,nominal_energy_wh,illustrative input
+B1-S1,VP06,P1,nominalVoltage,VT6,22.2,battery,voltage_v,illustrative input
+B1-S1,VP07,P2,continuousBusLimit,VT2,1400,config,vehicle.continuous_bus_limit_w,illustrative input
+B1-S1,VP08,P2,regulatorEfficiency,VT7,0.9,config,vehicle.regulator_efficiency,illustrative input
+B1-S1,VP09,P3,auxiliaryLoad,VT2,12,config,vehicle.avionics_power_w,illustrative input
+B1-S1,VP10,P5,payloadLoad,VT2,18,config,vehicle.payload_load_w,illustrative input
+B1-S1,VP11,P4,referencePower,VT2,600,config,physics.reference_power_w,illustrative input
+B1-S1,VP12,P4,referenceMass,VT1,4,config,physics.reference_mass_kg,illustrative input
+B1-S1,VP13,P4,rotorCount,VT11,4,config,vehicle.rotor_count,illustrative input
+B1-S1,VP14,P4,rotorRadius,VT5,0.2,config,vehicle.rotor_radius_m,illustrative input
+B1-S1,CV01,CASE,grossMass,VT1,4.0,result,gross_mass_kg,calculated under assumptions
+B1-S1,CV02,CASE,usableEnergy,VT3,198.0,result,usable_energy_wh,calculated under assumptions
+B1-S1,CV03,CASE,reserveEnergy,VT3,39.6,result,reserve_wh,calculated under assumptions
+B1-S1,CV04,CASE,missionEnergy,VT3,180.26203703703703,result,mission_energy_wh,calculated under assumptions
+B1-S1,CV05,CASE,energyMargin,VT3,-21.862037037037027,result,energy_margin_wh,calculated under assumptions
+B1-S1,CV06,CASE,maximumDwell,VT4,775.4694092827004,result,max_energy_dwell_s,calculated under assumptions
+B1-S1,CV07,CASE,requiredDwell,VT4,900,config,mission.dwell_s,illustrative input
+B1-S1,CV08,CASE,usableFraction,VT7,0.9,config,mission.usable_fraction,illustrative input
+B1-S1,CV09,CASE,reserveFraction,VT7,0.2,config,mission.reserve_fraction,illustrative input
+B1-S1,CV10,CASE,nonserviceEnergy,VT3,22.262037037037036,result,nonservice_energy_wh,calculated under assumptions
+B1-S1,CV11,CASE,servicePower,VT2,632.0,derived,ledger.relay.bus_power_w,calculated under assumptions
+B1-S1,CV12,CASE,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B1-S1,CV13,CASE,batteryMass,VT1,1.0,battery,battery_mass_kg,illustrative input
+B1-S1,CV14,CASE,mountIncrement,VT1,0,battery,mount_delta_kg,illustrative input
+B1-S1,CV15,CASE,nominalEnergy,VT3,220,battery,nominal_energy_wh,illustrative input
+B1-S2,VP01,AIR,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B1-S2,VP02,AIR,maximumGrossMass,VT1,5.5,config,vehicle.max_gross_mass_kg,illustrative input
+B1-S2,VP03,P1,batteryMass,VT1,1.0,battery,battery_mass_kg,illustrative input
+B1-S2,VP04,P6,mountIncrement,VT1,0,battery,mount_delta_kg,illustrative input
+B1-S2,VP05,P1,nominalEnergy,VT3,220,battery,nominal_energy_wh,illustrative input
+B1-S2,VP06,P1,nominalVoltage,VT6,22.2,battery,voltage_v,illustrative input
+B1-S2,VP07,P2,continuousBusLimit,VT2,1400,config,vehicle.continuous_bus_limit_w,illustrative input
+B1-S2,VP08,P2,regulatorEfficiency,VT7,0.9,config,vehicle.regulator_efficiency,illustrative input
+B1-S2,VP09,P3,auxiliaryLoad,VT2,12,config,vehicle.avionics_power_w,illustrative input
+B1-S2,VP10,P5,payloadLoad,VT2,18,config,vehicle.payload_load_w,illustrative input
+B1-S2,VP11,P4,referencePower,VT2,600,config,physics.reference_power_w,illustrative input
+B1-S2,VP12,P4,referenceMass,VT1,4,config,physics.reference_mass_kg,illustrative input
+B1-S2,VP13,P4,rotorCount,VT11,4,config,vehicle.rotor_count,illustrative input
+B1-S2,VP14,P4,rotorRadius,VT5,0.2,config,vehicle.rotor_radius_m,illustrative input
+B1-S2,CV01,CASE,grossMass,VT1,4.0,result,gross_mass_kg,calculated under assumptions
+B1-S2,CV02,CASE,usableEnergy,VT3,198.0,result,usable_energy_wh,calculated under assumptions
+B1-S2,CV03,CASE,reserveEnergy,VT3,39.6,result,reserve_wh,calculated under assumptions
+B1-S2,CV04,CASE,missionEnergy,VT3,201.10185185185185,result,mission_energy_wh,calculated under assumptions
+B1-S2,CV05,CASE,energyMargin,VT3,-42.70185185185184,result,energy_margin_wh,calculated under assumptions
+B1-S2,CV06,CASE,maximumDwell,VT4,656.7616033755274,result,max_energy_dwell_s,calculated under assumptions
+B1-S2,CV07,CASE,requiredDwell,VT4,900,config,mission.dwell_s,illustrative input
+B1-S2,CV08,CASE,usableFraction,VT7,0.9,config,mission.usable_fraction,illustrative input
+B1-S2,CV09,CASE,reserveFraction,VT7,0.2,config,mission.reserve_fraction,illustrative input
+B1-S2,CV10,CASE,nonserviceEnergy,VT3,43.101851851851855,result,nonservice_energy_wh,calculated under assumptions
+B1-S2,CV11,CASE,servicePower,VT2,632.0,derived,ledger.relay.bus_power_w,calculated under assumptions
+B1-S2,CV12,CASE,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B1-S2,CV13,CASE,batteryMass,VT1,1.0,battery,battery_mass_kg,illustrative input
+B1-S2,CV14,CASE,mountIncrement,VT1,0,battery,mount_delta_kg,illustrative input
+B1-S2,CV15,CASE,nominalEnergy,VT3,220,battery,nominal_energy_wh,illustrative input
+B1-S3,VP01,AIR,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B1-S3,VP02,AIR,maximumGrossMass,VT1,5.5,config,vehicle.max_gross_mass_kg,illustrative input
+B1-S3,VP03,P1,batteryMass,VT1,1.0,battery,battery_mass_kg,illustrative input
+B1-S3,VP04,P6,mountIncrement,VT1,0,battery,mount_delta_kg,illustrative input
+B1-S3,VP05,P1,nominalEnergy,VT3,220,battery,nominal_energy_wh,illustrative input
+B1-S3,VP06,P1,nominalVoltage,VT6,22.2,battery,voltage_v,illustrative input
+B1-S3,VP07,P2,continuousBusLimit,VT2,1400,config,vehicle.continuous_bus_limit_w,illustrative input
+B1-S3,VP08,P2,regulatorEfficiency,VT7,0.9,config,vehicle.regulator_efficiency,illustrative input
+B1-S3,VP09,P3,auxiliaryLoad,VT2,12,config,vehicle.avionics_power_w,illustrative input
+B1-S3,VP10,P5,payloadLoad,VT2,18,config,vehicle.payload_load_w,illustrative input
+B1-S3,VP11,P4,referencePower,VT2,600,config,physics.reference_power_w,illustrative input
+B1-S3,VP12,P4,referenceMass,VT1,4,config,physics.reference_mass_kg,illustrative input
+B1-S3,VP13,P4,rotorCount,VT11,4,config,vehicle.rotor_count,illustrative input
+B1-S3,VP14,P4,rotorRadius,VT5,0.2,config,vehicle.rotor_radius_m,illustrative input
+B1-S3,CV01,CASE,grossMass,VT1,4.0,result,gross_mass_kg,calculated under assumptions
+B1-S3,CV02,CASE,usableEnergy,VT3,198.0,result,usable_energy_wh,calculated under assumptions
+B1-S3,CV03,CASE,reserveEnergy,VT3,39.6,result,reserve_wh,calculated under assumptions
+B1-S3,CV04,CASE,missionEnergy,VT3,212.33055555555555,result,mission_energy_wh,calculated under assumptions
+B1-S3,CV05,CASE,energyMargin,VT3,-53.93055555555554,result,energy_margin_wh,calculated under assumptions
+B1-S3,CV06,CASE,maximumDwell,VT4,592.8006329113925,result,max_energy_dwell_s,calculated under assumptions
+B1-S3,CV07,CASE,requiredDwell,VT4,900,config,mission.dwell_s,illustrative input
+B1-S3,CV08,CASE,usableFraction,VT7,0.9,config,mission.usable_fraction,illustrative input
+B1-S3,CV09,CASE,reserveFraction,VT7,0.2,config,mission.reserve_fraction,illustrative input
+B1-S3,CV10,CASE,nonserviceEnergy,VT3,54.330555555555556,result,nonservice_energy_wh,calculated under assumptions
+B1-S3,CV11,CASE,servicePower,VT2,632.0,derived,ledger.relay.bus_power_w,calculated under assumptions
+B1-S3,CV12,CASE,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B1-S3,CV13,CASE,batteryMass,VT1,1.0,battery,battery_mass_kg,illustrative input
+B1-S3,CV14,CASE,mountIncrement,VT1,0,battery,mount_delta_kg,illustrative input
+B1-S3,CV15,CASE,nominalEnergy,VT3,220,battery,nominal_energy_wh,illustrative input
+B2-S1,VP01,AIR,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B2-S1,VP02,AIR,maximumGrossMass,VT1,5.5,config,vehicle.max_gross_mass_kg,illustrative input
+B2-S1,VP03,P1,batteryMass,VT1,1.7,battery,battery_mass_kg,illustrative input
+B2-S1,VP04,P6,mountIncrement,VT1,0.1,battery,mount_delta_kg,illustrative input
+B2-S1,VP05,P1,nominalEnergy,VT3,360,battery,nominal_energy_wh,illustrative input
+B2-S1,VP06,P1,nominalVoltage,VT6,22.2,battery,voltage_v,illustrative input
+B2-S1,VP07,P2,continuousBusLimit,VT2,1400,config,vehicle.continuous_bus_limit_w,illustrative input
+B2-S1,VP08,P2,regulatorEfficiency,VT7,0.9,config,vehicle.regulator_efficiency,illustrative input
+B2-S1,VP09,P3,auxiliaryLoad,VT2,12,config,vehicle.avionics_power_w,illustrative input
+B2-S1,VP10,P5,payloadLoad,VT2,18,config,vehicle.payload_load_w,illustrative input
+B2-S1,VP11,P4,referencePower,VT2,600,config,physics.reference_power_w,illustrative input
+B2-S1,VP12,P4,referenceMass,VT1,4,config,physics.reference_mass_kg,illustrative input
+B2-S1,VP13,P4,rotorCount,VT11,4,config,vehicle.rotor_count,illustrative input
+B2-S1,VP14,P4,rotorRadius,VT5,0.2,config,vehicle.rotor_radius_m,illustrative input
+B2-S1,CV01,CASE,grossMass,VT1,4.8,result,gross_mass_kg,calculated under assumptions
+B2-S1,CV02,CASE,usableEnergy,VT3,324.0,result,usable_energy_wh,calculated under assumptions
+B2-S1,CV03,CASE,reserveEnergy,VT3,64.8,result,reserve_wh,calculated under assumptions
+B2-S1,CV04,CASE,missionEnergy,VT3,234.10416552318722,result,mission_energy_wh,calculated under assumptions
+B2-S1,CV05,CASE,energyMargin,VT3,25.09583447681277,result,energy_margin_wh,calculated under assumptions
+B2-S1,CV06,CASE,maximumDwell,VT4,1010.0801137647776,result,max_energy_dwell_s,calculated under assumptions
+B2-S1,CV07,CASE,requiredDwell,VT4,900,config,mission.dwell_s,illustrative input
+B2-S1,CV08,CASE,usableFraction,VT7,0.9,config,mission.usable_fraction,illustrative input
+B2-S1,CV09,CASE,reserveFraction,VT7,0.2,config,mission.reserve_fraction,illustrative input
+B2-S1,CV10,CASE,nonserviceEnergy,VT3,28.92404482132742,result,nonservice_energy_wh,calculated under assumptions
+B2-S1,CV11,CASE,servicePower,VT2,820.7204828074391,derived,ledger.relay.bus_power_w,calculated under assumptions
+B2-S1,CV12,CASE,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B2-S1,CV13,CASE,batteryMass,VT1,1.7,battery,battery_mass_kg,illustrative input
+B2-S1,CV14,CASE,mountIncrement,VT1,0.1,battery,mount_delta_kg,illustrative input
+B2-S1,CV15,CASE,nominalEnergy,VT3,360,battery,nominal_energy_wh,illustrative input
+B2-S2,VP01,AIR,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B2-S2,VP02,AIR,maximumGrossMass,VT1,5.5,config,vehicle.max_gross_mass_kg,illustrative input
+B2-S2,VP03,P1,batteryMass,VT1,1.7,battery,battery_mass_kg,illustrative input
+B2-S2,VP04,P6,mountIncrement,VT1,0.1,battery,mount_delta_kg,illustrative input
+B2-S2,VP05,P1,nominalEnergy,VT3,360,battery,nominal_energy_wh,illustrative input
+B2-S2,VP06,P1,nominalVoltage,VT6,22.2,battery,voltage_v,illustrative input
+B2-S2,VP07,P2,continuousBusLimit,VT2,1400,config,vehicle.continuous_bus_limit_w,illustrative input
+B2-S2,VP08,P2,regulatorEfficiency,VT7,0.9,config,vehicle.regulator_efficiency,illustrative input
+B2-S2,VP09,P3,auxiliaryLoad,VT2,12,config,vehicle.avionics_power_w,illustrative input
+B2-S2,VP10,P5,payloadLoad,VT2,18,config,vehicle.payload_load_w,illustrative input
+B2-S2,VP11,P4,referencePower,VT2,600,config,physics.reference_power_w,illustrative input
+B2-S2,VP12,P4,referenceMass,VT1,4,config,physics.reference_mass_kg,illustrative input
+B2-S2,VP13,P4,rotorCount,VT11,4,config,vehicle.rotor_count,illustrative input
+B2-S2,VP14,P4,rotorRadius,VT5,0.2,config,vehicle.rotor_radius_m,illustrative input
+B2-S2,CV01,CASE,grossMass,VT1,4.8,result,gross_mass_kg,calculated under assumptions
+B2-S2,CV02,CASE,usableEnergy,VT3,324.0,result,usable_energy_wh,calculated under assumptions
+B2-S2,CV03,CASE,reserveEnergy,VT3,64.8,result,reserve_wh,calculated under assumptions
+B2-S2,CV04,CASE,missionEnergy,VT3,261.1866092716092,result,mission_energy_wh,calculated under assumptions
+B2-S2,CV05,CASE,energyMargin,VT3,-1.9866092716092112,result,energy_margin_wh,calculated under assumptions
+B2-S2,CV06,CASE,maximumDwell,VT4,891.2859572441411,result,max_energy_dwell_s,calculated under assumptions
+B2-S2,CV07,CASE,requiredDwell,VT4,900,config,mission.dwell_s,illustrative input
+B2-S2,CV08,CASE,usableFraction,VT7,0.9,config,mission.usable_fraction,illustrative input
+B2-S2,CV09,CASE,reserveFraction,VT7,0.2,config,mission.reserve_fraction,illustrative input
+B2-S2,CV10,CASE,nonserviceEnergy,VT3,56.00648856974943,result,nonservice_energy_wh,calculated under assumptions
+B2-S2,CV11,CASE,servicePower,VT2,820.7204828074391,derived,ledger.relay.bus_power_w,calculated under assumptions
+B2-S2,CV12,CASE,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B2-S2,CV13,CASE,batteryMass,VT1,1.7,battery,battery_mass_kg,illustrative input
+B2-S2,CV14,CASE,mountIncrement,VT1,0.1,battery,mount_delta_kg,illustrative input
+B2-S2,CV15,CASE,nominalEnergy,VT3,360,battery,nominal_energy_wh,illustrative input
+B2-S3,VP01,AIR,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B2-S3,VP02,AIR,maximumGrossMass,VT1,5.5,config,vehicle.max_gross_mass_kg,illustrative input
+B2-S3,VP03,P1,batteryMass,VT1,1.7,battery,battery_mass_kg,illustrative input
+B2-S3,VP04,P6,mountIncrement,VT1,0.1,battery,mount_delta_kg,illustrative input
+B2-S3,VP05,P1,nominalEnergy,VT3,360,battery,nominal_energy_wh,illustrative input
+B2-S3,VP06,P1,nominalVoltage,VT6,22.2,battery,voltage_v,illustrative input
+B2-S3,VP07,P2,continuousBusLimit,VT2,1400,config,vehicle.continuous_bus_limit_w,illustrative input
+B2-S3,VP08,P2,regulatorEfficiency,VT7,0.9,config,vehicle.regulator_efficiency,illustrative input
+B2-S3,VP09,P3,auxiliaryLoad,VT2,12,config,vehicle.avionics_power_w,illustrative input
+B2-S3,VP10,P5,payloadLoad,VT2,18,config,vehicle.payload_load_w,illustrative input
+B2-S3,VP11,P4,referencePower,VT2,600,config,physics.reference_power_w,illustrative input
+B2-S3,VP12,P4,referenceMass,VT1,4,config,physics.reference_mass_kg,illustrative input
+B2-S3,VP13,P4,rotorCount,VT11,4,config,vehicle.rotor_count,illustrative input
+B2-S3,VP14,P4,rotorRadius,VT5,0.2,config,vehicle.rotor_radius_m,illustrative input
+B2-S3,CV01,CASE,grossMass,VT1,4.8,result,gross_mass_kg,calculated under assumptions
+B2-S3,CV02,CASE,usableEnergy,VT3,324.0,result,usable_energy_wh,calculated under assumptions
+B2-S3,CV03,CASE,reserveEnergy,VT3,64.8,result,reserve_wh,calculated under assumptions
+B2-S3,CV04,CASE,missionEnergy,VT3,275.7747123104731,result,mission_energy_wh,calculated under assumptions
+B2-S3,CV05,CASE,energyMargin,VT3,-16.574712310473103,result,energy_margin_wh,calculated under assumptions
+B2-S3,CV06,CASE,maximumDwell,VT4,827.2968500632596,result,max_energy_dwell_s,calculated under assumptions
+B2-S3,CV07,CASE,requiredDwell,VT4,900,config,mission.dwell_s,illustrative input
+B2-S3,CV08,CASE,usableFraction,VT7,0.9,config,mission.usable_fraction,illustrative input
+B2-S3,CV09,CASE,reserveFraction,VT7,0.2,config,mission.reserve_fraction,illustrative input
+B2-S3,CV10,CASE,nonserviceEnergy,VT3,70.59459160861333,result,nonservice_energy_wh,calculated under assumptions
+B2-S3,CV11,CASE,servicePower,VT2,820.7204828074391,derived,ledger.relay.bus_power_w,calculated under assumptions
+B2-S3,CV12,CASE,nonbatteryMass,VT1,3.0,config,vehicle.nonbattery_mass_kg,illustrative input
+B2-S3,CV13,CASE,batteryMass,VT1,1.7,battery,battery_mass_kg,illustrative input
+B2-S3,CV14,CASE,mountIncrement,VT1,0.1,battery,mount_delta_kg,illustrative input
+B2-S3,CV15,CASE,nominalEnergy,VT3,360,battery,nominal_energy_wh,illustrative input

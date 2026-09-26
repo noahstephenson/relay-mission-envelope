@@ -1,0 +1,269 @@
+{
+  "scope": "Model behavior on explicit scenario mutations, not physical validation",
+  "cases": [
+    {
+      "id": "AC1",
+      "description": "Frozen 900 s request; no model-feasible option",
+      "expected_selection": "NO_FEASIBLE_OPTION",
+      "actual_selection": "NO_FEASIBLE_OPTION",
+      "passed": true,
+      "failed_gates": {
+        "B1-S1": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "B1-S2": [
+          "R2",
+          "R3"
+        ],
+        "B1-S3": [
+          "R2",
+          "R3"
+        ],
+        "B2-S1": [
+          "R1"
+        ],
+        "B2-S2": [
+          "R2",
+          "R3"
+        ],
+        "B2-S3": [
+          "R2",
+          "R3"
+        ]
+      }
+    },
+    {
+      "id": "AC2",
+      "description": "Separate 600 s mission request",
+      "expected_selection": "B1-S2",
+      "actual_selection": "B1-S2",
+      "passed": true,
+      "failed_gates": {
+        "B1-S1": [
+          "R1"
+        ],
+        "B1-S2": [],
+        "B1-S3": [
+          "R2",
+          "R3"
+        ],
+        "B2-S1": [
+          "R1"
+        ],
+        "B2-S2": [],
+        "B2-S3": []
+      }
+    },
+    {
+      "id": "AC3",
+      "description": "Shared 10 percent lower propulsion demand",
+      "expected_selection": "B2-S2",
+      "actual_selection": "B2-S2",
+      "passed": true,
+      "failed_gates": {
+        "B1-S1": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "B1-S2": [
+          "R2",
+          "R3"
+        ],
+        "B1-S3": [
+          "R2",
+          "R3"
+        ],
+        "B2-S1": [
+          "R1"
+        ],
+        "B2-S2": [],
+        "B2-S3": []
+      }
+    },
+    {
+      "id": "AC4",
+      "description": "Shared 10 percent higher propulsion demand",
+      "expected_selection": "NO_FEASIBLE_OPTION",
+      "actual_selection": "NO_FEASIBLE_OPTION",
+      "passed": true,
+      "failed_gates": {
+        "B1-S1": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "B1-S2": [
+          "R2",
+          "R3"
+        ],
+        "B1-S3": [
+          "R2",
+          "R3"
+        ],
+        "B2-S1": [
+          "R1"
+        ],
+        "B2-S2": [
+          "R2",
+          "R3"
+        ],
+        "B2-S3": [
+          "R2",
+          "R3"
+        ]
+      }
+    },
+    {
+      "id": "AC5",
+      "description": "All masses exceed a deliberately reduced ceiling",
+      "expected_selection": "NO_FEASIBLE_OPTION",
+      "actual_selection": "NO_FEASIBLE_OPTION",
+      "passed": true,
+      "failed_gates": {
+        "B1-S1": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "B1-S2": [
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "B1-S3": [
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "B2-S1": [
+          "R1",
+          "R4"
+        ],
+        "B2-S2": [
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "B2-S3": [
+          "R2",
+          "R3",
+          "R4"
+        ]
+      }
+    },
+    {
+      "id": "AC6",
+      "description": "All bus demands exceed a deliberately reduced ceiling",
+      "expected_selection": "NO_FEASIBLE_OPTION",
+      "actual_selection": "NO_FEASIBLE_OPTION",
+      "passed": true,
+      "failed_gates": {
+        "B1-S1": [
+          "R1",
+          "R2",
+          "R3",
+          "R5"
+        ],
+        "B1-S2": [
+          "R2",
+          "R3",
+          "R5"
+        ],
+        "B1-S3": [
+          "R2",
+          "R3",
+          "R5"
+        ],
+        "B2-S1": [
+          "R1",
+          "R5"
+        ],
+        "B2-S2": [
+          "R2",
+          "R3",
+          "R5"
+        ],
+        "B2-S3": [
+          "R2",
+          "R3",
+          "R5"
+        ]
+      }
+    },
+    {
+      "id": "AC7",
+      "description": "Deliberately impossible radio threshold",
+      "expected_selection": "NO_FEASIBLE_OPTION",
+      "actual_selection": "NO_FEASIBLE_OPTION",
+      "passed": true,
+      "failed_gates": {
+        "B1-S1": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "B1-S2": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "B1-S3": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "B2-S1": [
+          "R1"
+        ],
+        "B2-S2": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "B2-S3": [
+          "R1",
+          "R2",
+          "R3"
+        ]
+      }
+    },
+    {
+      "id": "AC8",
+      "description": "Mass range excludes both installed configurations",
+      "expected_selection": "NO_FEASIBLE_OPTION",
+      "actual_selection": "NO_FEASIBLE_OPTION",
+      "passed": true,
+      "failed_gates": {
+        "B1-S1": [
+          "R1",
+          "R2",
+          "R3"
+        ],
+        "B1-S2": [
+          "R2",
+          "R3"
+        ],
+        "B1-S3": [
+          "R2",
+          "R3"
+        ],
+        "B2-S1": [
+          "R1"
+        ],
+        "B2-S2": [
+          "R2",
+          "R3"
+        ],
+        "B2-S3": [
+          "R2",
+          "R3"
+        ]
+      }
+    }
+  ],
+  "passed": true
+}

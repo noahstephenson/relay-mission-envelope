@@ -1,0 +1,23 @@
+classDiagram
+    direction TB
+    class L0["Relay capability"]
+    class L1["L1 Mission management"] {
+      Plan and configure
+      Assess status and recovery
+    }
+    class L2["L2 Flight support"] {
+      Deploy and position
+      Return and recover
+    }
+    class L3["L3 Relay service"] {
+      Receive mission traffic
+      Forward mission traffic
+    }
+    class L4["L4 Energy support"] {
+      Store and distribute energy
+      Provide resource information
+    }
+    L0 *-- L1 : mission
+    L0 *-- L2 : flight
+    L0 *-- L3 : service
+    L0 *-- L4 : energy

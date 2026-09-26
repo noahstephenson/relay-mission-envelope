@@ -1,0 +1,12 @@
+flowchart LR
+    subgraph VALUES["Case values"]
+      U["usableEnergy: Wh"]
+      R["reserveEnergy: Wh"]
+      Q["nonserviceEnergy: Wh"]
+      P["servicePower: W"]
+    end
+    U ---|"usable"| CB5["CB5 EnergySupportedDwell"]
+    R ---|"reserve"| CB5
+    Q ---|"nonservice"| CB5
+    P ---|"servicePower"| CB5
+    CB5 ---|"dwell"| T["maximumDwell: s"]

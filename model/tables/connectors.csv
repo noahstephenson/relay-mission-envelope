@@ -1,0 +1,13 @@
+id,owner_id,source_part_path,source_port_id,target_part_path,target_port_id,interface_id,item
+CN1,AIR,AP1,PT01,AP2,PT02,I1,DC supply
+CN2,AIR,AP2,PT03,AP4,PT04,I1,Propulsion supply
+CN3,AIR,AP2,PT05,AP3,PT06,I1,Avionics supply
+CN4,AIR,AP2,PT07,AP5,PT08,I2,Regulated payload supply
+CN5,AIR,AP3,PT15,AP4,PT16,IF6,Flight command
+CN6,SYS,SP2,PT13,SP1/AP3,PT14,I5,Carrier command/status
+CN7,CTX,CP2,PT09,CP1/SP1/AP5,PT10,I4,Hop 1
+CN8,CTX,CP1/SP1/AP5,PT11,CP3,PT12,I4,Hop 2
+MC1,AIR,AP6,MP1,AP1,MR1,I3,Mounting relationship; no simulated mechanical flow
+MC2,AIR,AP6,MP2,AP3,MR2,I3,Mounting relationship; no simulated mechanical flow
+MC3,AIR,AP6,MP3,AP4,MR3,I3,Mounting relationship; no simulated mechanical flow
+MC4,AIR,AP6,MP4,AP5,MR4,I3,Mounting relationship; no simulated mechanical flow

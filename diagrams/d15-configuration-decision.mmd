@@ -1,0 +1,8 @@
+flowchart TD
+    B["Two battery configurations"] --> E["Evaluate all six options"]
+    S["Three relay stations"] --> E
+    M["Shared mission and assumptions"] --> E
+    E -.-> X["Report every option and failure reason"]
+    E --> G{"Any option passes modeled gates and domain?"}
+    G -->|"No"| N["No feasible option in this model"]
+    G -->|"Yes"| W["Select lowest mass; then energy, link margin and ID"]

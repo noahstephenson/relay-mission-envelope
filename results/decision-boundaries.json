@@ -1,0 +1,65 @@
+{
+  "status": "analytic boundaries of the illustrative model; not supported physical uncertainty bounds",
+  "options": [
+    {
+      "option_id": "B1-S1",
+      "energy_break_even_power_multiplier": 0.8722866801893172,
+      "power_ceiling_multiplier": 1.824,
+      "maximum_admissible_power_multiplier": 0.8722866801893172,
+      "fixed_gates_pass": false,
+      "requested_dwell_s": 900,
+      "max_energy_dwell_s": 775.4694092827004,
+      "interpretation": "Fixed gate or nonpositive allowance prevents this boundary from admitting the option"
+    },
+    {
+      "option_id": "B1-S2",
+      "energy_break_even_power_multiplier": 0.7764626048179923,
+      "power_ceiling_multiplier": 1.824,
+      "maximum_admissible_power_multiplier": 0.7764626048179923,
+      "fixed_gates_pass": true,
+      "requested_dwell_s": 900,
+      "max_energy_dwell_s": 656.7616033755274,
+      "interpretation": "Passes modeled gates for 0 < multiplier <= cap under fixed assumptions"
+    },
+    {
+      "option_id": "B1-S3",
+      "energy_break_even_power_multiplier": 0.7326309991048682,
+      "power_ceiling_multiplier": 1.824,
+      "maximum_admissible_power_multiplier": 0.7326309991048682,
+      "fixed_gates_pass": true,
+      "requested_dwell_s": 900,
+      "max_energy_dwell_s": 592.8006329113925,
+      "interpretation": "Passes modeled gates for 0 < multiplier <= cap under fixed assumptions"
+    },
+    {
+      "option_id": "B2-S1",
+      "energy_break_even_power_multiplier": 1.1115257983153446,
+      "power_ceiling_multiplier": 1.387563812346421,
+      "maximum_admissible_power_multiplier": 1.1115257983153446,
+      "fixed_gates_pass": false,
+      "requested_dwell_s": 900,
+      "max_energy_dwell_s": 1010.0801137647776,
+      "interpretation": "Fixed gate or nonpositive allowance prevents this boundary from admitting the option"
+    },
+    {
+      "option_id": "B2-S2",
+      "energy_break_even_power_multiplier": 0.9920887690053128,
+      "power_ceiling_multiplier": 1.387563812346421,
+      "maximum_admissible_power_multiplier": 0.9920887690053128,
+      "fixed_gates_pass": true,
+      "requested_dwell_s": 900,
+      "max_energy_dwell_s": 891.2859572441411,
+      "interpretation": "Passes modeled gates for 0 < multiplier <= cap under fixed assumptions"
+    },
+    {
+      "option_id": "B2-S3",
+      "energy_break_even_power_multiplier": 0.9374898862727763,
+      "power_ceiling_multiplier": 1.387563812346421,
+      "maximum_admissible_power_multiplier": 0.9374898862727763,
+      "fixed_gates_pass": true,
+      "requested_dwell_s": 900,
+      "max_energy_dwell_s": 827.2968500632596,
+      "interpretation": "Passes modeled gates for 0 < multiplier <= cap under fixed assumptions"
+    }
+  ]
+}

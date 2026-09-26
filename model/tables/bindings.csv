@@ -1,0 +1,17 @@
+id,owner_id,constraint_usage,constraint_type_id,parameter,value_property_id
+BC01,CASE,mass,CB1,gross,CV01
+BC02,CASE,mass,CB1,nonbattery,CV12
+BC03,CASE,mass,CB1,battery,CV13
+BC04,CASE,mass,CB1,mount,CV14
+BC05,CASE,reserve,CB4,usable,CV02
+BC06,CASE,reserve,CB4,nominal,CV15
+BC07,CASE,reserve,CB4,usableFraction,CV08
+BC08,CASE,reserve,CB4,reserve,CV03
+BC09,CASE,reserve,CB4,reserveFraction,CV09
+BC10,CASE,reserve,CB4,margin,CV05
+BC11,CASE,reserve,CB4,mission,CV04
+BC12,CASE,dwell,CB5,dwell,CV06
+BC13,CASE,dwell,CB5,usable,CV02
+BC14,CASE,dwell,CB5,reserve,CV03
+BC15,CASE,dwell,CB5,nonservice,CV10
+BC16,CASE,dwell,CB5,servicePower,CV11

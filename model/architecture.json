@@ -1,0 +1,2461 @@
+{
+  "schema_version": 1,
+  "status": "proposed architecture; assistant-prepared; Noah acceptance pending",
+  "target": "SysML-style architecture expressed in Mermaid; no formal SysML execution semantics",
+  "packages": [
+    {
+      "id": "PK0",
+      "name": "RelayMissionEnvelope",
+      "parent_id": "",
+      "purpose": "Root model"
+    },
+    {
+      "id": "PK1",
+      "name": "01 Mission and stakeholders",
+      "parent_id": "PK0",
+      "purpose": "Actors, operational needs and use cases"
+    },
+    {
+      "id": "PK2",
+      "name": "02 Requirements",
+      "parent_id": "PK0",
+      "purpose": "Assessed and unassessed requirements"
+    },
+    {
+      "id": "PK3",
+      "name": "03 Functional behavior",
+      "parent_id": "PK0",
+      "purpose": "Mission functions and state behavior"
+    },
+    {
+      "id": "PK4",
+      "name": "04 Logical architecture",
+      "parent_id": "PK0",
+      "purpose": "Grouped responsibilities"
+    },
+    {
+      "id": "PK5",
+      "name": "05 Physical architecture",
+      "parent_id": "PK0",
+      "purpose": "Types and system-context part usage"
+    },
+    {
+      "id": "PK6",
+      "name": "06 Interfaces and types",
+      "parent_id": "PK0",
+      "purpose": "Typed boundary interactions and value types"
+    },
+    {
+      "id": "PK7",
+      "name": "07 Analysis and configurations",
+      "parent_id": "PK0",
+      "purpose": "Constraint definitions and external calculation cases"
+    },
+    {
+      "id": "PK8",
+      "name": "08 Verification and evidence",
+      "parent_id": "PK0",
+      "purpose": "Verification intent, not a test result repository"
+    }
+  ],
+  "elements": [
+    {
+      "id": "A1",
+      "name": "Field communications user",
+      "kind": "Actor",
+      "package_id": "PK1",
+      "description": "Stakeholder role; not an airborne component"
+    },
+    {
+      "id": "A2",
+      "name": "Aircraft operator",
+      "kind": "Actor",
+      "package_id": "PK1",
+      "description": "Stakeholder role; not an airborne component"
+    },
+    {
+      "id": "A3",
+      "name": "Field support",
+      "kind": "Actor",
+      "package_id": "PK1",
+      "description": "Stakeholder role; not an airborne component"
+    },
+    {
+      "id": "A4",
+      "name": "Engineering reviewer",
+      "kind": "Actor",
+      "package_id": "PK1",
+      "description": "Stakeholder role; not an airborne component"
+    },
+    {
+      "id": "N1",
+      "name": "Sustained service",
+      "kind": "Requirement",
+      "package_id": "PK1",
+      "description": "Provide the requested one-way relay service for the declared dwell.",
+      "requirement_text": "Provide the requested one-way relay service for the declared dwell.",
+      "evidence_status": "analyst-defined need"
+    },
+    {
+      "id": "N2",
+      "name": "Recoverable sortie",
+      "kind": "Requirement",
+      "package_id": "PK1",
+      "description": "Account for the whole planned sortie and preserve reserve.",
+      "requirement_text": "Account for the whole planned sortie and preserve reserve.",
+      "evidence_status": "analyst-defined need"
+    },
+    {
+      "id": "N3",
+      "name": "Deployment burden",
+      "kind": "Requirement",
+      "package_id": "PK1",
+      "description": "Make battery choice and installed mass transparent.",
+      "requirement_text": "Make battery choice and installed mass transparent.",
+      "evidence_status": "analyst-defined need"
+    },
+    {
+      "id": "N4",
+      "name": "Reviewable recommendation",
+      "kind": "Requirement",
+      "package_id": "PK1",
+      "description": "Trace the recommendation to repeatable calculations and assumptions.",
+      "requirement_text": "Trace the recommendation to repeatable calculations and assumptions.",
+      "evidence_status": "analyst-defined need"
+    },
+    {
+      "id": "UC1",
+      "name": "Prepare relay sortie",
+      "kind": "UseCase",
+      "package_id": "PK1",
+      "description": "Review request, choose configuration, check declared gates. Reject dispatch if a gate or required operational evidence is missing.",
+      "precondition": "Service request available",
+      "postcondition": "Plan and configuration are assessed"
+    },
+    {
+      "id": "UC2",
+      "name": "Establish service",
+      "kind": "UseCase",
+      "package_id": "PK1",
+      "description": "Climb, transit, and establish. Unsuccessful establishment ends service attempt and prompts intended recovery.",
+      "precondition": "Accepted preparation",
+      "postcondition": "Station reached and both hops established"
+    },
+    {
+      "id": "UC3",
+      "name": "Sustain relay service",
+      "kind": "UseCase",
+      "package_id": "PK1",
+      "description": "Relay A-to-B traffic while monitoring resources. Physical service delivery is not simulated.",
+      "precondition": "Service established",
+      "postcondition": "Requested dwell provided"
+    },
+    {
+      "id": "UC4",
+      "name": "End service and recover",
+      "kind": "UseCase",
+      "package_id": "PK1",
+      "description": "Return horizontally and descend at base. Off-nominal recovery is a described responsibility.",
+      "precondition": "Dwell complete or service ends",
+      "postcondition": "Aircraft at recovery point"
+    },
+    {
+      "id": "UC5",
+      "name": "Restore readiness",
+      "kind": "UseCase",
+      "package_id": "PK1",
+      "description": "Inspect and replace/recharge pack as appropriate. No turnaround-time model.",
+      "precondition": "Aircraft recovered",
+      "postcondition": "Preparation responsibility restored"
+    },
+    {
+      "id": "R1",
+      "name": "Clear and adequate service hops",
+      "kind": "Requirement",
+      "package_id": "PK2",
+      "description": "For each declared service hop, the analysis shall require clearance margin at least 0 m relative to the wall top plus 5 m and link margin at least 10 dB above the -90 dBm assumed receiver threshold.",
+      "requirement_text": "For each declared service hop, the analysis shall require clearance margin at least 0 m relative to the wall top plus 5 m and link margin at least 10 dB above the -90 dBm assumed receiver threshold.",
+      "evidence_status": "conditional calculation",
+      "config_path": "radio.required_margin_db; obstacle.clearance_m"
+    },
+    {
+      "id": "R2",
+      "name": "Requested service duration",
+      "kind": "Requirement",
+      "package_id": "PK2",
+      "description": "Under the declared continuous-service assumptions, the analysis shall require energy-supported relay dwell of at least mission.dwell_s (baseline 900 s).",
+      "requirement_text": "Under the declared continuous-service assumptions, the analysis shall require energy-supported relay dwell of at least mission.dwell_s (baseline 900 s).",
+      "evidence_status": "energy proxy; actual service unassessed",
+      "config_path": "mission.dwell_s"
+    },
+    {
+      "id": "R3",
+      "name": "Mission energy and reserve",
+      "kind": "Requirement",
+      "package_id": "PK2",
+      "description": "For each option, planned mission energy plus reserve shall not exceed nominal_energy_wh times usable_fraction. Reserve is reserve_fraction of usable energy.",
+      "requirement_text": "For each option, planned mission energy plus reserve shall not exceed nominal_energy_wh times usable_fraction. Reserve is reserve_fraction of usable energy.",
+      "evidence_status": "conditional calculation",
+      "config_path": "mission.usable_fraction; mission.reserve_fraction"
+    },
+    {
+      "id": "R4",
+      "name": "Gross mass ceiling",
+      "kind": "Requirement",
+      "package_id": "PK2",
+      "description": "For each option, installed gross mass shall not exceed vehicle.max_gross_mass_kg (baseline 5.5 kg).",
+      "requirement_text": "For each option, installed gross mass shall not exceed vehicle.max_gross_mass_kg (baseline 5.5 kg).",
+      "evidence_status": "assumed ceiling",
+      "config_path": "vehicle.max_gross_mass_kg"
+    },
+    {
+      "id": "R5",
+      "name": "Continuous bus power",
+      "kind": "Requirement",
+      "package_id": "PK2",
+      "description": "For each option, the highest modeled segment bus demand shall not exceed vehicle.continuous_bus_limit_w (baseline 1400 W). Transients remain unassessed.",
+      "requirement_text": "For each option, the highest modeled segment bus demand shall not exceed vehicle.continuous_bus_limit_w (baseline 1400 W). Transients remain unassessed.",
+      "evidence_status": "assumed ceiling",
+      "config_path": "vehicle.continuous_bus_limit_w"
+    },
+    {
+      "id": "R6",
+      "name": "Declared installation interfaces",
+      "kind": "Requirement",
+      "package_id": "PK2",
+      "description": "The architecture shall specify I1\u2013I5, their load and connection assumptions, and evidence gaps before a configuration is accepted for physical implementation.",
+      "requirement_text": "The architecture shall specify I1\u2013I5, their load and connection assumptions, and evidence gaps before a configuration is accepted for physical implementation.",
+      "evidence_status": "documentation review pending; hardware unassessed",
+      "config_path": "not applicable"
+    },
+    {
+      "id": "R7",
+      "name": "Comparable alternative records",
+      "kind": "Requirement",
+      "package_id": "PK2",
+      "description": "The study shall report pack and gross mass, usable and reserve energy, energy margin and maximum supported dwell for each of the six options.",
+      "requirement_text": "The study shall report pack and gross mass, usable and reserve energy, energy margin and maximum supported dwell for each of the six options.",
+      "evidence_status": "artifact inspection",
+      "config_path": "batteries; stations"
+    },
+    {
+      "id": "R8",
+      "name": "Reproducible provenance",
+      "kind": "Requirement",
+      "package_id": "PK2",
+      "description": "Each generated study shall preserve resolved inputs and their SHA-256, state provisional physics and evidence status, and identify the calculation source.",
+      "requirement_text": "Each generated study shall preserve resolved inputs and their SHA-256, state provisional physics and evidence status, and identify the calculation source.",
+      "evidence_status": "artifact inspection",
+      "config_path": "provenance"
+    },
+    {
+      "id": "F1",
+      "name": "Plan and configure",
+      "kind": "Activity",
+      "package_id": "PK3",
+      "description": "Operational responsibility; no flight-control implementation implied"
+    },
+    {
+      "id": "F2",
+      "name": "Deploy and position",
+      "kind": "Activity",
+      "package_id": "PK3",
+      "description": "Operational responsibility; no flight-control implementation implied"
+    },
+    {
+      "id": "F3",
+      "name": "Maintain relay service",
+      "kind": "Activity",
+      "package_id": "PK3",
+      "description": "Operational responsibility; no flight-control implementation implied"
+    },
+    {
+      "id": "F4",
+      "name": "Monitor resources and status",
+      "kind": "Activity",
+      "package_id": "PK3",
+      "description": "Operational responsibility; no flight-control implementation implied"
+    },
+    {
+      "id": "F5",
+      "name": "Return and recover",
+      "kind": "Activity",
+      "package_id": "PK3",
+      "description": "Operational responsibility; no flight-control implementation implied"
+    },
+    {
+      "id": "F6",
+      "name": "Supply and distribute power",
+      "kind": "Activity",
+      "package_id": "PK3",
+      "description": "Operational responsibility; no flight-control implementation implied"
+    },
+    {
+      "id": "ACT0",
+      "name": "Relay mission thread",
+      "kind": "Activity",
+      "package_id": "PK3",
+      "description": "Call F1,F2,F3,F5 sequentially; F4/F6 are supporting responsibilities, not a second energy-counted mission"
+    },
+    {
+      "id": "SM1",
+      "name": "Mission lifecycle",
+      "kind": "StateMachine",
+      "package_id": "PK3",
+      "description": "Preflight, NoDispatch, Deploy, Relay, Recover, Complete; off-nominal recovery described only"
+    },
+    {
+      "id": "L0",
+      "name": "Relay logical capability",
+      "kind": "Block",
+      "package_id": "PK4",
+      "description": "Logical responsibility independent of supplier/part number"
+    },
+    {
+      "id": "L1",
+      "name": "Mission management",
+      "kind": "Block",
+      "package_id": "PK4",
+      "description": "Logical responsibility independent of supplier/part number"
+    },
+    {
+      "id": "L2",
+      "name": "Flight support",
+      "kind": "Block",
+      "package_id": "PK4",
+      "description": "Logical responsibility independent of supplier/part number"
+    },
+    {
+      "id": "L3",
+      "name": "Relay service",
+      "kind": "Block",
+      "package_id": "PK4",
+      "description": "Logical responsibility independent of supplier/part number"
+    },
+    {
+      "id": "L4",
+      "name": "Energy support",
+      "kind": "Block",
+      "package_id": "PK4",
+      "description": "Logical responsibility independent of supplier/part number"
+    },
+    {
+      "id": "CTX",
+      "name": "Mission context",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "System and external reference usages"
+    },
+    {
+      "id": "SYS",
+      "name": "Deployable relay system",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Aircraft plus operator support"
+    },
+    {
+      "id": "AIR",
+      "name": "Relay aircraft",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Airborne composition; P1\u2013P6 once each"
+    },
+    {
+      "id": "P1",
+      "name": "Battery",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Selected pack, stored energy and discharge boundary"
+    },
+    {
+      "id": "P2",
+      "name": "Distribution and regulation",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Supply loads; combined reference distribution/mount mass is accounted once"
+    },
+    {
+      "id": "P3",
+      "name": "Avionics and carrier radio",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Commands, navigation/status and auxiliary load"
+    },
+    {
+      "id": "P4",
+      "name": "Propulsion assembly",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Controllers, motors and fixed rotors"
+    },
+    {
+      "id": "P5",
+      "name": "Relay assembly",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Relay radio and antennas"
+    },
+    {
+      "id": "P6",
+      "name": "Airframe and mounts",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Structure, landing gear and installation support"
+    },
+    {
+      "id": "OP",
+      "name": "Operator support",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Operator station and operating procedures; no airborne mass"
+    },
+    {
+      "id": "EA",
+      "name": "Field endpoint A",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "External service transmitter"
+    },
+    {
+      "id": "EB",
+      "name": "Remote endpoint B",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "External service receiver"
+    },
+    {
+      "id": "ENV",
+      "name": "Environment",
+      "kind": "Block",
+      "package_id": "PK5",
+      "description": "Ideal wall, fixed atmosphere and base datum"
+    },
+    {
+      "id": "VT1",
+      "name": "Mass",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "mass",
+      "unit": "kg",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT2",
+      "name": "Power",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "power",
+      "unit": "W",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT3",
+      "name": "Energy",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "energy",
+      "unit": "Wh",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT4",
+      "name": "Duration",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "time",
+      "unit": "s",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT5",
+      "name": "Length",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "length",
+      "unit": "m",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT6",
+      "name": "Voltage",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "electric potential",
+      "unit": "V",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT7",
+      "name": "Fraction",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "dimensionless",
+      "unit": "1",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT8",
+      "name": "Frequency",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "frequency",
+      "unit": "Hz",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT9",
+      "name": "Decibel",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "logarithmic ratio",
+      "unit": "dB",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT10",
+      "name": "Speed",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "speed",
+      "unit": "m/s",
+      "base_type": "Real"
+    },
+    {
+      "id": "VT11",
+      "name": "Count",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "count",
+      "unit": "1",
+      "base_type": "Integer"
+    },
+    {
+      "id": "VT12",
+      "name": "PowerLevel",
+      "kind": "ValueType",
+      "package_id": "PK6",
+      "description": "logarithmic power relative to 1 mW",
+      "unit": "dBm",
+      "base_type": "Real"
+    },
+    {
+      "id": "IT1",
+      "name": "MissionTraffic",
+      "kind": "DataType",
+      "package_id": "PK6",
+      "description": "Opaque service data; no rate specified"
+    },
+    {
+      "id": "IT2",
+      "name": "CarrierCommand",
+      "kind": "DataType",
+      "package_id": "PK6",
+      "description": "Launch, end service and recovery intent"
+    },
+    {
+      "id": "IT3",
+      "name": "CarrierStatus",
+      "kind": "DataType",
+      "package_id": "PK6",
+      "description": "Position and resource status"
+    },
+    {
+      "id": "IT4",
+      "name": "FlightCommand",
+      "kind": "DataType",
+      "package_id": "PK6",
+      "description": "Avionics-to-propulsion intent"
+    },
+    {
+      "id": "I1",
+      "name": "MainBusSupply",
+      "kind": "InterfaceBlock",
+      "package_id": "PK6",
+      "description": "Source perspective; consumed ports conjugated. Values describe electrical exchange, not an electrical solver.",
+      "flow_properties": [
+        {
+          "name": "power",
+          "type_id": "VT2",
+          "direction": "out"
+        },
+        {
+          "name": "voltage",
+          "type_id": "VT6",
+          "direction": "out"
+        }
+      ]
+    },
+    {
+      "id": "I2",
+      "name": "PayloadSupply",
+      "kind": "InterfaceBlock",
+      "package_id": "PK6",
+      "description": "Regulated source perspective; output voltage unresolved until hardware selected.",
+      "flow_properties": [
+        {
+          "name": "power",
+          "type_id": "VT2",
+          "direction": "out"
+        },
+        {
+          "name": "voltage",
+          "type_id": "VT6",
+          "direction": "out"
+        }
+      ]
+    },
+    {
+      "id": "I3",
+      "name": "MechanicalSupport",
+      "kind": "InterfaceBlock",
+      "package_id": "PK6",
+      "description": "Conceptual mounting contract, modeled without invented mechanical flow quantities; fit/CG/load capacity unassessed.",
+      "flow_properties": []
+    },
+    {
+      "id": "I4",
+      "name": "RelayTraffic",
+      "kind": "InterfaceBlock",
+      "package_id": "PK6",
+      "description": "Transmitter perspective; receiver port conjugated.",
+      "flow_properties": [
+        {
+          "name": "traffic",
+          "type_id": "IT1",
+          "direction": "out"
+        }
+      ]
+    },
+    {
+      "id": "I5",
+      "name": "CarrierControl",
+      "kind": "InterfaceBlock",
+      "package_id": "PK6",
+      "description": "Operator perspective; avionics conjugated.",
+      "flow_properties": [
+        {
+          "name": "command",
+          "type_id": "IT2",
+          "direction": "out"
+        },
+        {
+          "name": "status",
+          "type_id": "IT3",
+          "direction": "in"
+        }
+      ]
+    },
+    {
+      "id": "IF6",
+      "name": "FlightControl",
+      "kind": "InterfaceBlock",
+      "package_id": "PK6",
+      "description": "Internal avionics-to-propulsion signal; supporting interface, not a sixth top-level requirement group.",
+      "flow_properties": [
+        {
+          "name": "command",
+          "type_id": "IT4",
+          "direction": "out"
+        }
+      ]
+    },
+    {
+      "id": "CASE",
+      "name": "MissionAnalysisCase",
+      "kind": "Block",
+      "package_id": "PK7",
+      "description": "Analysis context, not an aircraft component; represents one pack/station/run combination"
+    },
+    {
+      "id": "CB1",
+      "name": "GrossMass",
+      "kind": "ConstraintBlock",
+      "package_id": "PK7",
+      "description": "gross = nonbattery + battery + mount"
+    },
+    {
+      "id": "CB2",
+      "name": "HoverElectricalPower",
+      "kind": "ConstraintBlock",
+      "package_id": "PK7",
+      "description": "hover = referencePower * (gross/referenceMass)^1.5 * multiplier"
+    },
+    {
+      "id": "CB3",
+      "name": "SegmentEnergy",
+      "kind": "ConstraintBlock",
+      "package_id": "PK7",
+      "description": "energyWh = busPowerW * durationSeconds / 3600"
+    },
+    {
+      "id": "CB4",
+      "name": "ReserveAccounting",
+      "kind": "ConstraintBlock",
+      "package_id": "PK7",
+      "description": "usable = nominal * usableFraction; reserve = usable * reserveFraction; margin = usable - reserve - mission"
+    },
+    {
+      "id": "CB5",
+      "name": "EnergySupportedDwell",
+      "kind": "ConstraintBlock",
+      "package_id": "PK7",
+      "description": "dwell = (usable - reserve - nonservice) * 3600 / servicePower"
+    },
+    {
+      "id": "TC1",
+      "name": "Verify R1",
+      "kind": "TestCase",
+      "package_id": "PK8",
+      "description": "Known wall and free-space fixtures; does not verify throughput",
+      "evidence_path": "tests/test_model.py"
+    },
+    {
+      "id": "TC2",
+      "name": "Verify R2",
+      "kind": "TestCase",
+      "package_id": "PK8",
+      "description": "Calculated dwell threshold including nonservice energy",
+      "evidence_path": "tests/test_model.py"
+    },
+    {
+      "id": "TC3",
+      "name": "Verify R3",
+      "kind": "TestCase",
+      "package_id": "PK8",
+      "description": "Independent ledger and equality/shortfall fixtures",
+      "evidence_path": "tests/test_model.py"
+    },
+    {
+      "id": "TC4",
+      "name": "Verify R4",
+      "kind": "TestCase",
+      "package_id": "PK8",
+      "description": "Mass buildup and ceiling fixtures",
+      "evidence_path": "tests/test_model.py"
+    },
+    {
+      "id": "TC5",
+      "name": "Verify R5",
+      "kind": "TestCase",
+      "package_id": "PK8",
+      "description": "Segment maximum and continuous ceiling fixtures",
+      "evidence_path": "tests/test_model.py"
+    },
+    {
+      "id": "TC6",
+      "name": "Verify R6",
+      "kind": "TestCase",
+      "package_id": "PK8",
+      "description": "Human review of interface register; physical compatibility remains unassessed",
+      "evidence_path": "docs/architecture.md"
+    },
+    {
+      "id": "TC7",
+      "name": "Verify R7",
+      "kind": "TestCase",
+      "package_id": "PK8",
+      "description": "Inspect six complete option records",
+      "evidence_path": "results/baseline.json"
+    },
+    {
+      "id": "TC8",
+      "name": "Verify R8",
+      "kind": "TestCase",
+      "package_id": "PK8",
+      "description": "Check input/source hashes and reproducibility",
+      "evidence_path": "results/baseline.json"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "REL001",
+      "kind": "trace",
+      "source_id": "N1",
+      "target_id": "A1",
+      "rationale": "Need attributed to stakeholder role; not interview evidence",
+      "status": "proposed"
+    },
+    {
+      "id": "REL002",
+      "kind": "trace",
+      "source_id": "N2",
+      "target_id": "A2",
+      "rationale": "Need attributed to stakeholder role; not interview evidence",
+      "status": "proposed"
+    },
+    {
+      "id": "REL003",
+      "kind": "trace",
+      "source_id": "N3",
+      "target_id": "A3",
+      "rationale": "Need attributed to stakeholder role; not interview evidence",
+      "status": "proposed"
+    },
+    {
+      "id": "REL004",
+      "kind": "trace",
+      "source_id": "N4",
+      "target_id": "A4",
+      "rationale": "Need attributed to stakeholder role; not interview evidence",
+      "status": "proposed"
+    },
+    {
+      "id": "REL005",
+      "kind": "association",
+      "source_id": "A2",
+      "target_id": "UC1",
+      "rationale": "Primary operational actor",
+      "status": "proposed"
+    },
+    {
+      "id": "REL006",
+      "kind": "association",
+      "source_id": "A2",
+      "target_id": "UC2",
+      "rationale": "Primary operational actor",
+      "status": "proposed"
+    },
+    {
+      "id": "REL007",
+      "kind": "association",
+      "source_id": "A1",
+      "target_id": "UC3",
+      "rationale": "Primary operational actor",
+      "status": "proposed"
+    },
+    {
+      "id": "REL008",
+      "kind": "association",
+      "source_id": "A2",
+      "target_id": "UC4",
+      "rationale": "Primary operational actor",
+      "status": "proposed"
+    },
+    {
+      "id": "REL009",
+      "kind": "association",
+      "source_id": "A3",
+      "target_id": "UC5",
+      "rationale": "Primary operational actor",
+      "status": "proposed"
+    },
+    {
+      "id": "REL010",
+      "kind": "deriveReqt",
+      "source_id": "R1",
+      "target_id": "N1",
+      "rationale": "Engineering requirement elaborates analyst-defined need",
+      "status": "proposed"
+    },
+    {
+      "id": "REL011",
+      "kind": "deriveReqt",
+      "source_id": "R2",
+      "target_id": "N1",
+      "rationale": "Engineering requirement elaborates analyst-defined need",
+      "status": "proposed"
+    },
+    {
+      "id": "REL012",
+      "kind": "deriveReqt",
+      "source_id": "R3",
+      "target_id": "N2",
+      "rationale": "Engineering requirement elaborates analyst-defined need",
+      "status": "proposed"
+    },
+    {
+      "id": "REL013",
+      "kind": "deriveReqt",
+      "source_id": "R4",
+      "target_id": "N2",
+      "rationale": "Engineering requirement elaborates analyst-defined need",
+      "status": "proposed"
+    },
+    {
+      "id": "REL014",
+      "kind": "deriveReqt",
+      "source_id": "R5",
+      "target_id": "N2",
+      "rationale": "Engineering requirement elaborates analyst-defined need",
+      "status": "proposed"
+    },
+    {
+      "id": "REL015",
+      "kind": "deriveReqt",
+      "source_id": "R6",
+      "target_id": "N2",
+      "rationale": "Engineering requirement elaborates analyst-defined need",
+      "status": "proposed"
+    },
+    {
+      "id": "REL016",
+      "kind": "deriveReqt",
+      "source_id": "R7",
+      "target_id": "N3",
+      "rationale": "Engineering requirement elaborates analyst-defined need",
+      "status": "proposed"
+    },
+    {
+      "id": "REL017",
+      "kind": "deriveReqt",
+      "source_id": "R8",
+      "target_id": "N4",
+      "rationale": "Engineering requirement elaborates analyst-defined need",
+      "status": "proposed"
+    },
+    {
+      "id": "REL018",
+      "kind": "trace",
+      "source_id": "R6",
+      "target_id": "N3",
+      "rationale": "Installation evidence also affects deployment burden",
+      "status": "proposed"
+    },
+    {
+      "id": "REL019",
+      "kind": "refine",
+      "source_id": "F1",
+      "target_id": "UC1",
+      "rationale": "Function elaborates use-case behavior",
+      "status": "proposed"
+    },
+    {
+      "id": "REL020",
+      "kind": "refine",
+      "source_id": "F2",
+      "target_id": "UC2",
+      "rationale": "Function elaborates use-case behavior",
+      "status": "proposed"
+    },
+    {
+      "id": "REL021",
+      "kind": "refine",
+      "source_id": "F6",
+      "target_id": "UC2",
+      "rationale": "Function elaborates use-case behavior",
+      "status": "proposed"
+    },
+    {
+      "id": "REL022",
+      "kind": "refine",
+      "source_id": "F3",
+      "target_id": "UC3",
+      "rationale": "Function elaborates use-case behavior",
+      "status": "proposed"
+    },
+    {
+      "id": "REL023",
+      "kind": "refine",
+      "source_id": "F4",
+      "target_id": "UC3",
+      "rationale": "Function elaborates use-case behavior",
+      "status": "proposed"
+    },
+    {
+      "id": "REL024",
+      "kind": "refine",
+      "source_id": "F6",
+      "target_id": "UC3",
+      "rationale": "Function elaborates use-case behavior",
+      "status": "proposed"
+    },
+    {
+      "id": "REL025",
+      "kind": "refine",
+      "source_id": "F4",
+      "target_id": "UC4",
+      "rationale": "Function elaborates use-case behavior",
+      "status": "proposed"
+    },
+    {
+      "id": "REL026",
+      "kind": "refine",
+      "source_id": "F5",
+      "target_id": "UC4",
+      "rationale": "Function elaborates use-case behavior",
+      "status": "proposed"
+    },
+    {
+      "id": "REL027",
+      "kind": "refine",
+      "source_id": "F6",
+      "target_id": "UC4",
+      "rationale": "Function elaborates use-case behavior",
+      "status": "proposed"
+    },
+    {
+      "id": "REL028",
+      "kind": "allocate",
+      "source_id": "F1",
+      "target_id": "L1",
+      "rationale": "Allocate operational responsibility to logical group",
+      "status": "proposed"
+    },
+    {
+      "id": "REL029",
+      "kind": "allocate",
+      "source_id": "F2",
+      "target_id": "L2",
+      "rationale": "Allocate operational responsibility to logical group",
+      "status": "proposed"
+    },
+    {
+      "id": "REL030",
+      "kind": "allocate",
+      "source_id": "F3",
+      "target_id": "L3",
+      "rationale": "Allocate operational responsibility to logical group",
+      "status": "proposed"
+    },
+    {
+      "id": "REL031",
+      "kind": "allocate",
+      "source_id": "F4",
+      "target_id": "L1",
+      "rationale": "Allocate operational responsibility to logical group",
+      "status": "proposed"
+    },
+    {
+      "id": "REL032",
+      "kind": "allocate",
+      "source_id": "F4",
+      "target_id": "L4",
+      "rationale": "Allocate operational responsibility to logical group",
+      "status": "proposed"
+    },
+    {
+      "id": "REL033",
+      "kind": "allocate",
+      "source_id": "F5",
+      "target_id": "L1",
+      "rationale": "Allocate operational responsibility to logical group",
+      "status": "proposed"
+    },
+    {
+      "id": "REL034",
+      "kind": "allocate",
+      "source_id": "F5",
+      "target_id": "L2",
+      "rationale": "Allocate operational responsibility to logical group",
+      "status": "proposed"
+    },
+    {
+      "id": "REL035",
+      "kind": "allocate",
+      "source_id": "F6",
+      "target_id": "L4",
+      "rationale": "Allocate operational responsibility to logical group",
+      "status": "proposed"
+    },
+    {
+      "id": "REL036",
+      "kind": "allocate",
+      "source_id": "L1",
+      "target_id": "OP",
+      "rationale": "Proposed logical-to-physical implementation",
+      "status": "proposed"
+    },
+    {
+      "id": "REL037",
+      "kind": "allocate",
+      "source_id": "L1",
+      "target_id": "P3",
+      "rationale": "Proposed logical-to-physical implementation",
+      "status": "proposed"
+    },
+    {
+      "id": "REL038",
+      "kind": "allocate",
+      "source_id": "L2",
+      "target_id": "P3",
+      "rationale": "Proposed logical-to-physical implementation",
+      "status": "proposed"
+    },
+    {
+      "id": "REL039",
+      "kind": "allocate",
+      "source_id": "L2",
+      "target_id": "P4",
+      "rationale": "Proposed logical-to-physical implementation",
+      "status": "proposed"
+    },
+    {
+      "id": "REL040",
+      "kind": "allocate",
+      "source_id": "L2",
+      "target_id": "P6",
+      "rationale": "Proposed logical-to-physical implementation",
+      "status": "proposed"
+    },
+    {
+      "id": "REL041",
+      "kind": "allocate",
+      "source_id": "L3",
+      "target_id": "P5",
+      "rationale": "Proposed logical-to-physical implementation",
+      "status": "proposed"
+    },
+    {
+      "id": "REL042",
+      "kind": "allocate",
+      "source_id": "L4",
+      "target_id": "P1",
+      "rationale": "Proposed logical-to-physical implementation",
+      "status": "proposed"
+    },
+    {
+      "id": "REL043",
+      "kind": "allocate",
+      "source_id": "L4",
+      "target_id": "P2",
+      "rationale": "Proposed logical-to-physical implementation",
+      "status": "proposed"
+    },
+    {
+      "id": "REL044",
+      "kind": "verify",
+      "source_id": "TC1",
+      "target_id": "R1",
+      "rationale": "Verification intent; relation itself is not a passed result",
+      "status": "calculation checks implemented"
+    },
+    {
+      "id": "REL045",
+      "kind": "verify",
+      "source_id": "TC2",
+      "target_id": "R2",
+      "rationale": "Verification intent; relation itself is not a passed result",
+      "status": "calculation checks implemented"
+    },
+    {
+      "id": "REL046",
+      "kind": "verify",
+      "source_id": "TC3",
+      "target_id": "R3",
+      "rationale": "Verification intent; relation itself is not a passed result",
+      "status": "calculation checks implemented"
+    },
+    {
+      "id": "REL047",
+      "kind": "verify",
+      "source_id": "TC4",
+      "target_id": "R4",
+      "rationale": "Verification intent; relation itself is not a passed result",
+      "status": "calculation checks implemented"
+    },
+    {
+      "id": "REL048",
+      "kind": "verify",
+      "source_id": "TC5",
+      "target_id": "R5",
+      "rationale": "Verification intent; relation itself is not a passed result",
+      "status": "calculation checks implemented"
+    },
+    {
+      "id": "REL049",
+      "kind": "verify",
+      "source_id": "TC6",
+      "target_id": "R6",
+      "rationale": "Verification intent; relation itself is not a passed result",
+      "status": "planned review"
+    },
+    {
+      "id": "REL050",
+      "kind": "verify",
+      "source_id": "TC7",
+      "target_id": "R7",
+      "rationale": "Verification intent; relation itself is not a passed result",
+      "status": "calculation checks implemented"
+    },
+    {
+      "id": "REL051",
+      "kind": "verify",
+      "source_id": "TC8",
+      "target_id": "R8",
+      "rationale": "Verification intent; relation itself is not a passed result",
+      "status": "calculation checks implemented"
+    },
+    {
+      "id": "REL052",
+      "kind": "trace",
+      "source_id": "F3",
+      "target_id": "R1",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL053",
+      "kind": "trace",
+      "source_id": "F3",
+      "target_id": "R2",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL054",
+      "kind": "trace",
+      "source_id": "F6",
+      "target_id": "R2",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL055",
+      "kind": "trace",
+      "source_id": "F4",
+      "target_id": "R3",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL056",
+      "kind": "trace",
+      "source_id": "F5",
+      "target_id": "R3",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL057",
+      "kind": "trace",
+      "source_id": "F6",
+      "target_id": "R3",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL058",
+      "kind": "trace",
+      "source_id": "F2",
+      "target_id": "R4",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL059",
+      "kind": "trace",
+      "source_id": "F6",
+      "target_id": "R5",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL060",
+      "kind": "trace",
+      "source_id": "F1",
+      "target_id": "R6",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL061",
+      "kind": "trace",
+      "source_id": "F1",
+      "target_id": "R7",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL062",
+      "kind": "trace",
+      "source_id": "F1",
+      "target_id": "R8",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    },
+    {
+      "id": "REL063",
+      "kind": "trace",
+      "source_id": "F4",
+      "target_id": "R8",
+      "rationale": "Responsibility contributes to requirement; not a satisfaction claim",
+      "status": "proposed"
+    }
+  ],
+  "parts": [
+    {
+      "id": "LP1",
+      "owner_id": "L0",
+      "name": "logical1",
+      "type_id": "L1",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "LP2",
+      "owner_id": "L0",
+      "name": "logical2",
+      "type_id": "L2",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "LP3",
+      "owner_id": "L0",
+      "name": "logical3",
+      "type_id": "L3",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "LP4",
+      "owner_id": "L0",
+      "name": "logical4",
+      "type_id": "L4",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "CP1",
+      "owner_id": "CTX",
+      "name": "system",
+      "type_id": "SYS",
+      "multiplicity": "1",
+      "aggregation": "reference"
+    },
+    {
+      "id": "CP2",
+      "owner_id": "CTX",
+      "name": "endpointA",
+      "type_id": "EA",
+      "multiplicity": "1",
+      "aggregation": "reference"
+    },
+    {
+      "id": "CP3",
+      "owner_id": "CTX",
+      "name": "endpointB",
+      "type_id": "EB",
+      "multiplicity": "1",
+      "aggregation": "reference"
+    },
+    {
+      "id": "CP4",
+      "owner_id": "CTX",
+      "name": "environment",
+      "type_id": "ENV",
+      "multiplicity": "1",
+      "aggregation": "reference"
+    },
+    {
+      "id": "SP1",
+      "owner_id": "SYS",
+      "name": "aircraft",
+      "type_id": "AIR",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "SP2",
+      "owner_id": "SYS",
+      "name": "operatorSupport",
+      "type_id": "OP",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "AP1",
+      "owner_id": "AIR",
+      "name": "battery",
+      "type_id": "P1",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "AP2",
+      "owner_id": "AIR",
+      "name": "distribution",
+      "type_id": "P2",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "AP3",
+      "owner_id": "AIR",
+      "name": "avionics",
+      "type_id": "P3",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "AP4",
+      "owner_id": "AIR",
+      "name": "propulsion",
+      "type_id": "P4",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "AP5",
+      "owner_id": "AIR",
+      "name": "relay",
+      "type_id": "P5",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    },
+    {
+      "id": "AP6",
+      "owner_id": "AIR",
+      "name": "structure",
+      "type_id": "P6",
+      "multiplicity": "1",
+      "aggregation": "composite"
+    }
+  ],
+  "value_properties": [
+    {
+      "id": "VP01",
+      "owner_id": "AIR",
+      "name": "nonbatteryMass",
+      "type_id": "VT1",
+      "source": "config",
+      "path": "vehicle.nonbattery_mass_kg"
+    },
+    {
+      "id": "VP02",
+      "owner_id": "AIR",
+      "name": "maximumGrossMass",
+      "type_id": "VT1",
+      "source": "config",
+      "path": "vehicle.max_gross_mass_kg"
+    },
+    {
+      "id": "VP03",
+      "owner_id": "P1",
+      "name": "batteryMass",
+      "type_id": "VT1",
+      "source": "battery",
+      "path": "battery_mass_kg"
+    },
+    {
+      "id": "VP04",
+      "owner_id": "P6",
+      "name": "mountIncrement",
+      "type_id": "VT1",
+      "source": "battery",
+      "path": "mount_delta_kg"
+    },
+    {
+      "id": "VP05",
+      "owner_id": "P1",
+      "name": "nominalEnergy",
+      "type_id": "VT3",
+      "source": "battery",
+      "path": "nominal_energy_wh"
+    },
+    {
+      "id": "VP06",
+      "owner_id": "P1",
+      "name": "nominalVoltage",
+      "type_id": "VT6",
+      "source": "battery",
+      "path": "voltage_v"
+    },
+    {
+      "id": "VP07",
+      "owner_id": "P2",
+      "name": "continuousBusLimit",
+      "type_id": "VT2",
+      "source": "config",
+      "path": "vehicle.continuous_bus_limit_w"
+    },
+    {
+      "id": "VP08",
+      "owner_id": "P2",
+      "name": "regulatorEfficiency",
+      "type_id": "VT7",
+      "source": "config",
+      "path": "vehicle.regulator_efficiency"
+    },
+    {
+      "id": "VP09",
+      "owner_id": "P3",
+      "name": "auxiliaryLoad",
+      "type_id": "VT2",
+      "source": "config",
+      "path": "vehicle.avionics_power_w"
+    },
+    {
+      "id": "VP10",
+      "owner_id": "P5",
+      "name": "payloadLoad",
+      "type_id": "VT2",
+      "source": "config",
+      "path": "vehicle.payload_load_w"
+    },
+    {
+      "id": "VP11",
+      "owner_id": "P4",
+      "name": "referencePower",
+      "type_id": "VT2",
+      "source": "config",
+      "path": "physics.reference_power_w"
+    },
+    {
+      "id": "VP12",
+      "owner_id": "P4",
+      "name": "referenceMass",
+      "type_id": "VT1",
+      "source": "config",
+      "path": "physics.reference_mass_kg"
+    },
+    {
+      "id": "VP13",
+      "owner_id": "P4",
+      "name": "rotorCount",
+      "type_id": "VT11",
+      "source": "config",
+      "path": "vehicle.rotor_count"
+    },
+    {
+      "id": "VP14",
+      "owner_id": "P4",
+      "name": "rotorRadius",
+      "type_id": "VT5",
+      "source": "config",
+      "path": "vehicle.rotor_radius_m"
+    },
+    {
+      "id": "CV01",
+      "owner_id": "CASE",
+      "name": "grossMass",
+      "type_id": "VT1",
+      "source": "result",
+      "path": "gross_mass_kg"
+    },
+    {
+      "id": "CV02",
+      "owner_id": "CASE",
+      "name": "usableEnergy",
+      "type_id": "VT3",
+      "source": "result",
+      "path": "usable_energy_wh"
+    },
+    {
+      "id": "CV03",
+      "owner_id": "CASE",
+      "name": "reserveEnergy",
+      "type_id": "VT3",
+      "source": "result",
+      "path": "reserve_wh"
+    },
+    {
+      "id": "CV04",
+      "owner_id": "CASE",
+      "name": "missionEnergy",
+      "type_id": "VT3",
+      "source": "result",
+      "path": "mission_energy_wh"
+    },
+    {
+      "id": "CV05",
+      "owner_id": "CASE",
+      "name": "energyMargin",
+      "type_id": "VT3",
+      "source": "result",
+      "path": "energy_margin_wh"
+    },
+    {
+      "id": "CV06",
+      "owner_id": "CASE",
+      "name": "maximumDwell",
+      "type_id": "VT4",
+      "source": "result",
+      "path": "max_energy_dwell_s"
+    },
+    {
+      "id": "CV07",
+      "owner_id": "CASE",
+      "name": "requiredDwell",
+      "type_id": "VT4",
+      "source": "config",
+      "path": "mission.dwell_s"
+    },
+    {
+      "id": "CV08",
+      "owner_id": "CASE",
+      "name": "usableFraction",
+      "type_id": "VT7",
+      "source": "config",
+      "path": "mission.usable_fraction"
+    },
+    {
+      "id": "CV09",
+      "owner_id": "CASE",
+      "name": "reserveFraction",
+      "type_id": "VT7",
+      "source": "config",
+      "path": "mission.reserve_fraction"
+    },
+    {
+      "id": "CV10",
+      "owner_id": "CASE",
+      "name": "nonserviceEnergy",
+      "type_id": "VT3",
+      "source": "result",
+      "path": "nonservice_energy_wh"
+    },
+    {
+      "id": "CV11",
+      "owner_id": "CASE",
+      "name": "servicePower",
+      "type_id": "VT2",
+      "source": "derived",
+      "path": "ledger.relay.bus_power_w"
+    },
+    {
+      "id": "CV12",
+      "owner_id": "CASE",
+      "name": "nonbatteryMass",
+      "type_id": "VT1",
+      "source": "config",
+      "path": "vehicle.nonbattery_mass_kg"
+    },
+    {
+      "id": "CV13",
+      "owner_id": "CASE",
+      "name": "batteryMass",
+      "type_id": "VT1",
+      "source": "battery",
+      "path": "battery_mass_kg"
+    },
+    {
+      "id": "CV14",
+      "owner_id": "CASE",
+      "name": "mountIncrement",
+      "type_id": "VT1",
+      "source": "battery",
+      "path": "mount_delta_kg"
+    },
+    {
+      "id": "CV15",
+      "owner_id": "CASE",
+      "name": "nominalEnergy",
+      "type_id": "VT3",
+      "source": "battery",
+      "path": "nominal_energy_wh"
+    }
+  ],
+  "ports": [
+    {
+      "id": "PT01",
+      "owner_id": "P1",
+      "name": "mainOut",
+      "type_id": "I1",
+      "is_conjugated": false
+    },
+    {
+      "id": "PT02",
+      "owner_id": "P2",
+      "name": "mainIn",
+      "type_id": "I1",
+      "is_conjugated": true
+    },
+    {
+      "id": "PT03",
+      "owner_id": "P2",
+      "name": "propulsionOut",
+      "type_id": "I1",
+      "is_conjugated": false
+    },
+    {
+      "id": "PT04",
+      "owner_id": "P4",
+      "name": "powerIn",
+      "type_id": "I1",
+      "is_conjugated": true
+    },
+    {
+      "id": "PT05",
+      "owner_id": "P2",
+      "name": "avionicsOut",
+      "type_id": "I1",
+      "is_conjugated": false
+    },
+    {
+      "id": "PT06",
+      "owner_id": "P3",
+      "name": "powerIn",
+      "type_id": "I1",
+      "is_conjugated": true
+    },
+    {
+      "id": "PT07",
+      "owner_id": "P2",
+      "name": "payloadOut",
+      "type_id": "I2",
+      "is_conjugated": false
+    },
+    {
+      "id": "PT08",
+      "owner_id": "P5",
+      "name": "powerIn",
+      "type_id": "I2",
+      "is_conjugated": true
+    },
+    {
+      "id": "PT09",
+      "owner_id": "EA",
+      "name": "serviceOut",
+      "type_id": "I4",
+      "is_conjugated": false
+    },
+    {
+      "id": "PT10",
+      "owner_id": "P5",
+      "name": "serviceIn",
+      "type_id": "I4",
+      "is_conjugated": true
+    },
+    {
+      "id": "PT11",
+      "owner_id": "P5",
+      "name": "serviceOut",
+      "type_id": "I4",
+      "is_conjugated": false
+    },
+    {
+      "id": "PT12",
+      "owner_id": "EB",
+      "name": "serviceIn",
+      "type_id": "I4",
+      "is_conjugated": true
+    },
+    {
+      "id": "PT13",
+      "owner_id": "OP",
+      "name": "carrier",
+      "type_id": "I5",
+      "is_conjugated": false
+    },
+    {
+      "id": "PT14",
+      "owner_id": "P3",
+      "name": "carrier",
+      "type_id": "I5",
+      "is_conjugated": true
+    },
+    {
+      "id": "PT15",
+      "owner_id": "P3",
+      "name": "flightOut",
+      "type_id": "IF6",
+      "is_conjugated": false
+    },
+    {
+      "id": "PT16",
+      "owner_id": "P4",
+      "name": "flightIn",
+      "type_id": "IF6",
+      "is_conjugated": true
+    },
+    {
+      "id": "MP1",
+      "owner_id": "P6",
+      "name": "supportP1",
+      "type_id": "I3",
+      "is_conjugated": false
+    },
+    {
+      "id": "MR1",
+      "owner_id": "P1",
+      "name": "mount",
+      "type_id": "I3",
+      "is_conjugated": false
+    },
+    {
+      "id": "MP2",
+      "owner_id": "P6",
+      "name": "supportP3",
+      "type_id": "I3",
+      "is_conjugated": false
+    },
+    {
+      "id": "MR2",
+      "owner_id": "P3",
+      "name": "mount",
+      "type_id": "I3",
+      "is_conjugated": false
+    },
+    {
+      "id": "MP3",
+      "owner_id": "P6",
+      "name": "supportP4",
+      "type_id": "I3",
+      "is_conjugated": false
+    },
+    {
+      "id": "MR3",
+      "owner_id": "P4",
+      "name": "mount",
+      "type_id": "I3",
+      "is_conjugated": false
+    },
+    {
+      "id": "MP4",
+      "owner_id": "P6",
+      "name": "supportP5",
+      "type_id": "I3",
+      "is_conjugated": false
+    },
+    {
+      "id": "MR4",
+      "owner_id": "P5",
+      "name": "mount",
+      "type_id": "I3",
+      "is_conjugated": false
+    }
+  ],
+  "connectors": [
+    {
+      "id": "CN1",
+      "owner_id": "AIR",
+      "source_part_path": "AP1",
+      "source_port_id": "PT01",
+      "target_part_path": "AP2",
+      "target_port_id": "PT02",
+      "interface_id": "I1",
+      "item": "DC supply"
+    },
+    {
+      "id": "CN2",
+      "owner_id": "AIR",
+      "source_part_path": "AP2",
+      "source_port_id": "PT03",
+      "target_part_path": "AP4",
+      "target_port_id": "PT04",
+      "interface_id": "I1",
+      "item": "Propulsion supply"
+    },
+    {
+      "id": "CN3",
+      "owner_id": "AIR",
+      "source_part_path": "AP2",
+      "source_port_id": "PT05",
+      "target_part_path": "AP3",
+      "target_port_id": "PT06",
+      "interface_id": "I1",
+      "item": "Avionics supply"
+    },
+    {
+      "id": "CN4",
+      "owner_id": "AIR",
+      "source_part_path": "AP2",
+      "source_port_id": "PT07",
+      "target_part_path": "AP5",
+      "target_port_id": "PT08",
+      "interface_id": "I2",
+      "item": "Regulated payload supply"
+    },
+    {
+      "id": "CN5",
+      "owner_id": "AIR",
+      "source_part_path": "AP3",
+      "source_port_id": "PT15",
+      "target_part_path": "AP4",
+      "target_port_id": "PT16",
+      "interface_id": "IF6",
+      "item": "Flight command"
+    },
+    {
+      "id": "CN6",
+      "owner_id": "SYS",
+      "source_part_path": "SP2",
+      "source_port_id": "PT13",
+      "target_part_path": "SP1/AP3",
+      "target_port_id": "PT14",
+      "interface_id": "I5",
+      "item": "Carrier command/status"
+    },
+    {
+      "id": "CN7",
+      "owner_id": "CTX",
+      "source_part_path": "CP2",
+      "source_port_id": "PT09",
+      "target_part_path": "CP1/SP1/AP5",
+      "target_port_id": "PT10",
+      "interface_id": "I4",
+      "item": "Hop 1"
+    },
+    {
+      "id": "CN8",
+      "owner_id": "CTX",
+      "source_part_path": "CP1/SP1/AP5",
+      "source_port_id": "PT11",
+      "target_part_path": "CP3",
+      "target_port_id": "PT12",
+      "interface_id": "I4",
+      "item": "Hop 2"
+    },
+    {
+      "id": "MC1",
+      "owner_id": "AIR",
+      "source_part_path": "AP6",
+      "source_port_id": "MP1",
+      "target_part_path": "AP1",
+      "target_port_id": "MR1",
+      "interface_id": "I3",
+      "item": "Mounting relationship; no simulated mechanical flow"
+    },
+    {
+      "id": "MC2",
+      "owner_id": "AIR",
+      "source_part_path": "AP6",
+      "source_port_id": "MP2",
+      "target_part_path": "AP3",
+      "target_port_id": "MR2",
+      "interface_id": "I3",
+      "item": "Mounting relationship; no simulated mechanical flow"
+    },
+    {
+      "id": "MC3",
+      "owner_id": "AIR",
+      "source_part_path": "AP6",
+      "source_port_id": "MP3",
+      "target_part_path": "AP4",
+      "target_port_id": "MR3",
+      "interface_id": "I3",
+      "item": "Mounting relationship; no simulated mechanical flow"
+    },
+    {
+      "id": "MC4",
+      "owner_id": "AIR",
+      "source_part_path": "AP6",
+      "source_port_id": "MP4",
+      "target_part_path": "AP5",
+      "target_port_id": "MR4",
+      "interface_id": "I3",
+      "item": "Mounting relationship; no simulated mechanical flow"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "CB1",
+      "equation": "gross = nonbattery + battery + mount",
+      "parameters": [
+        {
+          "name": "gross",
+          "type_id": "VT1"
+        },
+        {
+          "name": "nonbattery",
+          "type_id": "VT1"
+        },
+        {
+          "name": "battery",
+          "type_id": "VT1"
+        },
+        {
+          "name": "mount",
+          "type_id": "VT1"
+        }
+      ],
+      "implementation": "energy.py: energy"
+    },
+    {
+      "id": "CB2",
+      "equation": "hover = referencePower * (gross/referenceMass)^1.5 * multiplier",
+      "parameters": [
+        {
+          "name": "hover",
+          "type_id": "VT2"
+        },
+        {
+          "name": "referencePower",
+          "type_id": "VT2"
+        },
+        {
+          "name": "gross",
+          "type_id": "VT1"
+        },
+        {
+          "name": "referenceMass",
+          "type_id": "VT1"
+        },
+        {
+          "name": "multiplier",
+          "type_id": "VT7"
+        }
+      ],
+      "implementation": "energy.py: energy"
+    },
+    {
+      "id": "CB3",
+      "equation": "energyWh = busPowerW * durationSeconds / 3600",
+      "parameters": [
+        {
+          "name": "energyWh",
+          "type_id": "VT3"
+        },
+        {
+          "name": "busPowerW",
+          "type_id": "VT2"
+        },
+        {
+          "name": "durationSeconds",
+          "type_id": "VT4"
+        }
+      ],
+      "implementation": "energy.py: ledger"
+    },
+    {
+      "id": "CB4",
+      "equation": "usable = nominal * usableFraction; reserve = usable * reserveFraction; margin = usable - reserve - mission",
+      "parameters": [
+        {
+          "name": "usable",
+          "type_id": "VT3"
+        },
+        {
+          "name": "nominal",
+          "type_id": "VT3"
+        },
+        {
+          "name": "usableFraction",
+          "type_id": "VT7"
+        },
+        {
+          "name": "reserve",
+          "type_id": "VT3"
+        },
+        {
+          "name": "reserveFraction",
+          "type_id": "VT7"
+        },
+        {
+          "name": "margin",
+          "type_id": "VT3"
+        },
+        {
+          "name": "mission",
+          "type_id": "VT3"
+        }
+      ],
+      "implementation": "energy.py: energy"
+    },
+    {
+      "id": "CB5",
+      "equation": "dwell = (usable - reserve - nonservice) * 3600 / servicePower",
+      "parameters": [
+        {
+          "name": "dwell",
+          "type_id": "VT4"
+        },
+        {
+          "name": "usable",
+          "type_id": "VT3"
+        },
+        {
+          "name": "reserve",
+          "type_id": "VT3"
+        },
+        {
+          "name": "nonservice",
+          "type_id": "VT3"
+        },
+        {
+          "name": "servicePower",
+          "type_id": "VT2"
+        }
+      ],
+      "implementation": "energy.py: energy"
+    }
+  ],
+  "bindings": [
+    {
+      "id": "BC01",
+      "owner_id": "CASE",
+      "constraint_usage": "mass",
+      "constraint_type_id": "CB1",
+      "parameter": "gross",
+      "value_property_id": "CV01"
+    },
+    {
+      "id": "BC02",
+      "owner_id": "CASE",
+      "constraint_usage": "mass",
+      "constraint_type_id": "CB1",
+      "parameter": "nonbattery",
+      "value_property_id": "CV12"
+    },
+    {
+      "id": "BC03",
+      "owner_id": "CASE",
+      "constraint_usage": "mass",
+      "constraint_type_id": "CB1",
+      "parameter": "battery",
+      "value_property_id": "CV13"
+    },
+    {
+      "id": "BC04",
+      "owner_id": "CASE",
+      "constraint_usage": "mass",
+      "constraint_type_id": "CB1",
+      "parameter": "mount",
+      "value_property_id": "CV14"
+    },
+    {
+      "id": "BC05",
+      "owner_id": "CASE",
+      "constraint_usage": "reserve",
+      "constraint_type_id": "CB4",
+      "parameter": "usable",
+      "value_property_id": "CV02"
+    },
+    {
+      "id": "BC06",
+      "owner_id": "CASE",
+      "constraint_usage": "reserve",
+      "constraint_type_id": "CB4",
+      "parameter": "nominal",
+      "value_property_id": "CV15"
+    },
+    {
+      "id": "BC07",
+      "owner_id": "CASE",
+      "constraint_usage": "reserve",
+      "constraint_type_id": "CB4",
+      "parameter": "usableFraction",
+      "value_property_id": "CV08"
+    },
+    {
+      "id": "BC08",
+      "owner_id": "CASE",
+      "constraint_usage": "reserve",
+      "constraint_type_id": "CB4",
+      "parameter": "reserve",
+      "value_property_id": "CV03"
+    },
+    {
+      "id": "BC09",
+      "owner_id": "CASE",
+      "constraint_usage": "reserve",
+      "constraint_type_id": "CB4",
+      "parameter": "reserveFraction",
+      "value_property_id": "CV09"
+    },
+    {
+      "id": "BC10",
+      "owner_id": "CASE",
+      "constraint_usage": "reserve",
+      "constraint_type_id": "CB4",
+      "parameter": "margin",
+      "value_property_id": "CV05"
+    },
+    {
+      "id": "BC11",
+      "owner_id": "CASE",
+      "constraint_usage": "reserve",
+      "constraint_type_id": "CB4",
+      "parameter": "mission",
+      "value_property_id": "CV04"
+    },
+    {
+      "id": "BC12",
+      "owner_id": "CASE",
+      "constraint_usage": "dwell",
+      "constraint_type_id": "CB5",
+      "parameter": "dwell",
+      "value_property_id": "CV06"
+    },
+    {
+      "id": "BC13",
+      "owner_id": "CASE",
+      "constraint_usage": "dwell",
+      "constraint_type_id": "CB5",
+      "parameter": "usable",
+      "value_property_id": "CV02"
+    },
+    {
+      "id": "BC14",
+      "owner_id": "CASE",
+      "constraint_usage": "dwell",
+      "constraint_type_id": "CB5",
+      "parameter": "reserve",
+      "value_property_id": "CV03"
+    },
+    {
+      "id": "BC15",
+      "owner_id": "CASE",
+      "constraint_usage": "dwell",
+      "constraint_type_id": "CB5",
+      "parameter": "nonservice",
+      "value_property_id": "CV10"
+    },
+    {
+      "id": "BC16",
+      "owner_id": "CASE",
+      "constraint_usage": "dwell",
+      "constraint_type_id": "CB5",
+      "parameter": "servicePower",
+      "value_property_id": "CV11"
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "D01",
+      "name": "Mission context",
+      "kind": "Operational context",
+      "owner_id": "PK0",
+      "element_ids": [
+        "EA",
+        "EB",
+        "AIR",
+        "OP",
+        "A3",
+        "ENV"
+      ],
+      "purpose": "A-to-B service crosses the relay aircraft. Carrier command/status is a separate path; terrain constrains the service geometry.",
+      "source": "diagrams/d01-mission-context.mmd"
+    },
+    {
+      "id": "D02",
+      "name": "Service requirements",
+      "kind": "Requirement view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "N1",
+        "R1",
+        "R2",
+        "TC1",
+        "TC2",
+        "P5",
+        "P1"
+      ],
+      "purpose": "Engineering requirements derive from the service need. Dashed verify links identify check responsibilities; they do not claim demonstrated communications performance.",
+      "source": "diagrams/d02-service-requirements.mmd"
+    },
+    {
+      "id": "D03",
+      "name": "Recovery requirements",
+      "kind": "Requirement view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "N2",
+        "R3",
+        "R4",
+        "R5",
+        "TC3",
+        "TC4",
+        "TC5"
+      ],
+      "purpose": "Energy, installed mass and continuous demand constrain the planned sortie. Thresholds remain illustrative and actual recovery has not been demonstrated.",
+      "source": "diagrams/d03-recovery-requirements.mmd"
+    },
+    {
+      "id": "D04",
+      "name": "Interface and evidence requirements",
+      "kind": "Requirement view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "R6",
+        "R7",
+        "R8",
+        "N2",
+        "N3",
+        "N4",
+        "TC6",
+        "TC7",
+        "TC8"
+      ],
+      "purpose": "Installation evidence, comparison records and reproducibility have different checks. The interface review remains open even when the numerical tests pass.",
+      "source": "diagrams/d04-interface-and-evidence-requirements.mmd"
+    },
+    {
+      "id": "D05",
+      "name": "Operational use cases",
+      "kind": "Use-case view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "UC1",
+        "UC2",
+        "UC3",
+        "UC4",
+        "UC5",
+        "SYS"
+      ],
+      "purpose": "Rounded nodes represent use cases. Actor associations express participation, not execution order. Restore readiness is described but not simulated.",
+      "source": "diagrams/d05-operational-use-cases.mmd"
+    },
+    {
+      "id": "D06",
+      "name": "Mission functions",
+      "kind": "Activity-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6"
+      ],
+      "purpose": "Solid arrows indicate the nominal function sequence. Dashed arrows indicate supporting responsibilities, avoiding the suggestion that monitoring and power are extra timed flight segments.",
+      "source": "diagrams/d06-mission-functions.mmd"
+    },
+    {
+      "id": "D07",
+      "name": "Logical blocks",
+      "kind": "Block-definition-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "purpose": "Composition groups responsibilities independently of hardware. Class compartments list responsibilities, not implemented software methods.",
+      "source": "diagrams/d07-logical-blocks.mmd"
+    },
+    {
+      "id": "D08",
+      "name": "Physical composition",
+      "kind": "Block-definition-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "SYS",
+        "AIR",
+        "OP",
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6"
+      ],
+      "purpose": "Composition shows owned physical groups. Each box is a reusable block type; the labeled relationship is the part role. Both battery choices use this same structure.",
+      "source": "diagrams/d08-physical-composition.mmd"
+    },
+    {
+      "id": "D09",
+      "name": "Airborne interfaces",
+      "kind": "Internal-block-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "I1",
+        "I2",
+        "IF6"
+      ],
+      "purpose": "Solid edges carry electrical supply; the dashed edge carries flight commands. Interface types and conjugated port directions remain explicit in the model tables.",
+      "source": "diagrams/d09-airborne-interfaces.mmd"
+    },
+    {
+      "id": "D10",
+      "name": "Service and carrier interfaces",
+      "kind": "Internal-block-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "EA",
+        "EB",
+        "P5",
+        "P3",
+        "OP",
+        "AIR",
+        "I4",
+        "I5"
+      ],
+      "purpose": "The served endpoints are external. Mission traffic and carrier control enter different aircraft responsibilities; no throughput or command-link reliability is demonstrated here.",
+      "source": "diagrams/d10-service-and-carrier-interfaces.mmd"
+    },
+    {
+      "id": "D11",
+      "name": "Mission lifecycle",
+      "kind": "State-machine view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "SM1"
+      ],
+      "purpose": "The diagram specifies intended operational decisions. The evaluator checks a planned sortie and does not implement live flight control or off-nominal recovery.",
+      "source": "diagrams/d11-mission-lifecycle.mmd"
+    },
+    {
+      "id": "D12",
+      "name": "Installed mass constraint",
+      "kind": "Parametric-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "CASE",
+        "CB1"
+      ],
+      "purpose": "Undirected lines mean equality bindings between named values and constraint parameters. The mount increment is separate from pack mass. Python evaluates the relation.",
+      "source": "diagrams/d12-installed-mass-constraint.mmd"
+    },
+    {
+      "id": "D13",
+      "name": "Energy and reserve constraint",
+      "kind": "Parametric-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "CASE",
+        "CB4"
+      ],
+      "purpose": "One reserve deduction is applied to usable energy. Binding lines state equality, not calculation order; the constraint expression is listed below the figure in the book.",
+      "source": "diagrams/d13-energy-and-reserve-constraint.mmd"
+    },
+    {
+      "id": "D14",
+      "name": "Supported dwell constraint",
+      "kind": "Parametric-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "CASE",
+        "CB5"
+      ],
+      "purpose": "The maximum energy-supported dwell retains its sign. A negative value means the nonservice sortie already exceeds the allowance. Radio, mass and power checks still apply.",
+      "source": "diagrams/d14-supported-dwell-constraint.mmd"
+    },
+    {
+      "id": "D15",
+      "name": "Configuration decision",
+      "kind": "Activity-style analysis view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "CASE",
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "purpose": "Six options share one mission and requirement basis. The selection is provisional and never converts missing hardware or physical evidence into a pass.",
+      "source": "diagrams/d15-configuration-decision.mmd"
+    },
+    {
+      "id": "D16",
+      "name": "Propulsion power constraint",
+      "kind": "Parametric-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "CASE",
+        "CB2",
+        "P4"
+      ],
+      "purpose": "Fixed rotor geometry and a propulsion-only reference operating point define the provisional hover electrical law. The shared multiplier is a sensitivity input, not a wind model.",
+      "source": "diagrams/d16-propulsion-power-constraint.mmd"
+    },
+    {
+      "id": "D17",
+      "name": "Segment energy constraint",
+      "kind": "Parametric-style view",
+      "owner_id": "PK0",
+      "element_ids": [
+        "CASE",
+        "CB3",
+        "P2",
+        "P3",
+        "P5"
+      ],
+      "purpose": "Propulsion and auxiliary loads are accounted at the main bus. The payload regulator loss enters once. Duration times power is converted from joules to Wh by dividing by 3600.",
+      "source": "diagrams/d17-segment-energy-constraint.mmd"
+    }
+  ]
+}

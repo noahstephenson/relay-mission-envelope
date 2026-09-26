@@ -1,0 +1,64 @@
+id,kind,source_id,target_id,rationale,status
+REL001,trace,N1,A1,Need attributed to stakeholder role; not interview evidence,proposed
+REL002,trace,N2,A2,Need attributed to stakeholder role; not interview evidence,proposed
+REL003,trace,N3,A3,Need attributed to stakeholder role; not interview evidence,proposed
+REL004,trace,N4,A4,Need attributed to stakeholder role; not interview evidence,proposed
+REL005,association,A2,UC1,Primary operational actor,proposed
+REL006,association,A2,UC2,Primary operational actor,proposed
+REL007,association,A1,UC3,Primary operational actor,proposed
+REL008,association,A2,UC4,Primary operational actor,proposed
+REL009,association,A3,UC5,Primary operational actor,proposed
+REL010,deriveReqt,R1,N1,Engineering requirement elaborates analyst-defined need,proposed
+REL011,deriveReqt,R2,N1,Engineering requirement elaborates analyst-defined need,proposed
+REL012,deriveReqt,R3,N2,Engineering requirement elaborates analyst-defined need,proposed
+REL013,deriveReqt,R4,N2,Engineering requirement elaborates analyst-defined need,proposed
+REL014,deriveReqt,R5,N2,Engineering requirement elaborates analyst-defined need,proposed
+REL015,deriveReqt,R6,N2,Engineering requirement elaborates analyst-defined need,proposed
+REL016,deriveReqt,R7,N3,Engineering requirement elaborates analyst-defined need,proposed
+REL017,deriveReqt,R8,N4,Engineering requirement elaborates analyst-defined need,proposed
+REL018,trace,R6,N3,Installation evidence also affects deployment burden,proposed
+REL019,refine,F1,UC1,Function elaborates use-case behavior,proposed
+REL020,refine,F2,UC2,Function elaborates use-case behavior,proposed
+REL021,refine,F6,UC2,Function elaborates use-case behavior,proposed
+REL022,refine,F3,UC3,Function elaborates use-case behavior,proposed
+REL023,refine,F4,UC3,Function elaborates use-case behavior,proposed
+REL024,refine,F6,UC3,Function elaborates use-case behavior,proposed
+REL025,refine,F4,UC4,Function elaborates use-case behavior,proposed
+REL026,refine,F5,UC4,Function elaborates use-case behavior,proposed
+REL027,refine,F6,UC4,Function elaborates use-case behavior,proposed
+REL028,allocate,F1,L1,Allocate operational responsibility to logical group,proposed
+REL029,allocate,F2,L2,Allocate operational responsibility to logical group,proposed
+REL030,allocate,F3,L3,Allocate operational responsibility to logical group,proposed
+REL031,allocate,F4,L1,Allocate operational responsibility to logical group,proposed
+REL032,allocate,F4,L4,Allocate operational responsibility to logical group,proposed
+REL033,allocate,F5,L1,Allocate operational responsibility to logical group,proposed
+REL034,allocate,F5,L2,Allocate operational responsibility to logical group,proposed
+REL035,allocate,F6,L4,Allocate operational responsibility to logical group,proposed
+REL036,allocate,L1,OP,Proposed logical-to-physical implementation,proposed
+REL037,allocate,L1,P3,Proposed logical-to-physical implementation,proposed
+REL038,allocate,L2,P3,Proposed logical-to-physical implementation,proposed
+REL039,allocate,L2,P4,Proposed logical-to-physical implementation,proposed
+REL040,allocate,L2,P6,Proposed logical-to-physical implementation,proposed
+REL041,allocate,L3,P5,Proposed logical-to-physical implementation,proposed
+REL042,allocate,L4,P1,Proposed logical-to-physical implementation,proposed
+REL043,allocate,L4,P2,Proposed logical-to-physical implementation,proposed
+REL044,verify,TC1,R1,Verification intent; relation itself is not a passed result,calculation checks implemented
+REL045,verify,TC2,R2,Verification intent; relation itself is not a passed result,calculation checks implemented
+REL046,verify,TC3,R3,Verification intent; relation itself is not a passed result,calculation checks implemented
+REL047,verify,TC4,R4,Verification intent; relation itself is not a passed result,calculation checks implemented
+REL048,verify,TC5,R5,Verification intent; relation itself is not a passed result,calculation checks implemented
+REL049,verify,TC6,R6,Verification intent; relation itself is not a passed result,planned review
+REL050,verify,TC7,R7,Verification intent; relation itself is not a passed result,calculation checks implemented
+REL051,verify,TC8,R8,Verification intent; relation itself is not a passed result,calculation checks implemented
+REL052,trace,F3,R1,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL053,trace,F3,R2,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL054,trace,F6,R2,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL055,trace,F4,R3,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL056,trace,F5,R3,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL057,trace,F6,R3,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL058,trace,F2,R4,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL059,trace,F6,R5,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL060,trace,F1,R6,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL061,trace,F1,R7,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL062,trace,F1,R8,Responsibility contributes to requirement; not a satisfaction claim,proposed
+REL063,trace,F4,R8,Responsibility contributes to requirement; not a satisfaction claim,proposed

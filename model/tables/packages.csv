@@ -1,0 +1,10 @@
+id,name,parent_id,purpose
+PK0,RelayMissionEnvelope,,Root model
+PK1,01 Mission and stakeholders,PK0,"Actors, operational needs and use cases"
+PK2,02 Requirements,PK0,Assessed and unassessed requirements
+PK3,03 Functional behavior,PK0,Mission functions and state behavior
+PK4,04 Logical architecture,PK0,Grouped responsibilities
+PK5,05 Physical architecture,PK0,Types and system-context part usage
+PK6,06 Interfaces and types,PK0,Typed boundary interactions and value types
+PK7,07 Analysis and configurations,PK0,Constraint definitions and external calculation cases
+PK8,08 Verification and evidence,PK0,"Verification intent, not a test result repository"

@@ -1,0 +1,29 @@
+{
+  "python": "3.11.0",
+  "matplotlib": "3.11.1",
+  "git_commit": null,
+  "note": "No repository commit yet; source bytes identified individually",
+  "files_sha256": {
+    "config\\baseline.json": "e6399209fea1a4df53f153f451c344ecb74d64e2e24217c9edd93fce9c4a0626",
+    "model\\architecture.json": "6b2ef3a1c230c80276655c870fcd06564c8198f064ec4218f10c179a10ad95ec",
+    "physics\\analytical_starter.py": "e5d2e024c33e672f7ea07d14c0e98d2f1df7bebd4768b13960c39a4d4d3b5153",
+    "scripts\\build_architecture.py": "6d52e9111bf598e7c22661da83920cd904019baa16e5b71efccb41854c7e04e3",
+    "scripts\\build_diagram_book.py": "5aa62c83176276e4f38a7637f5e398178c7706eb61a64d27883c3c31b93bb883",
+    "scripts\\build_evidence.py": "15171fda94d580240ac6f3e71991651d0707ddaf9c115c67406585cdcf3e3466",
+    "scripts\\build_gap_review.py": "06038ae41da26015b1fec108e8e632fbbeca3f6c05f538f970cf03d73d4a2b32",
+    "scripts\\render_diagrams.py": "e6456ef0b3ca3abfd66d30d1dcdeb145714baef4680695a0a3fe45dfb8d23308",
+    "scripts\\reproduce.py": "2d98415b8ad45aa555cbe69e8429b08ab2b2d45e70096aaca90ae07b16fafc8c",
+    "scripts\\run_acceptance_cases.py": "90006f38f0d7eac46277c71f88d80689e0c5d6062923ca5b586f4320b6d87119",
+    "src\\relay_envelope\\__init__.py": "bdfd8eef09f1d916b3523590a52ef250b5f8b0d7982274012bc28a7492333b17",
+    "src\\relay_envelope\\__main__.py": "ac3044ad8c3718c4489190e3c26e2d417034ba2995dafcadc98e1cd142ad63c0",
+    "src\\relay_envelope\\boundaries.py": "93320abeabce704c0a2aa5c6808795ac111039889a4476b5a38559ef4a31b842",
+    "src\\relay_envelope\\energy.py": "a62b5b0ee78a127578dfd0b9950b787eafac84d89e28ad19fa4360e7df71c3d8",
+    "src\\relay_envelope\\evaluate.py": "3ed09f8b3a4fc4ae3fafff7c79b5197c8f2e4749d2c8d67f57039cbcf70f13b8",
+    "src\\relay_envelope\\geometry.py": "815aa49d5b28277ee3fe29f06f3b23b868c19b46e66c234447ca1b5ede67c048",
+    "src\\relay_envelope\\links.py": "3657c6a6415b009ae2a31caea426644095d15431fdc705a3e681486d51e7e323",
+    "src\\relay_envelope\\report.py": "e8e652f1209f787f476429d8c44f95e3c16071fa6318bd145bb84c7f62164855",
+    "tests\\test_architecture.py": "6cbe2786ad560bbdca075a6a57fc93dfc07449bc6e610175ac6e79029703b3b1",
+    "tests\\test_decisions.py": "e6bf6f4e6468d84a28887d961d2dadf5067d22b4aab8b2a8832b2d58d47be9bc",
+    "tests\\test_model.py": "79bfbb9464c876ed16d092359b7c10bb9fdd0e6eb43436a8ab4bbb142d707afb"
+  }
+}

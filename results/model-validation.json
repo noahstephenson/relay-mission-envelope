@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "registry references, allocations, typed ports and bindings; not physical validation or formal SysML conformance",
+  "counts": {
+    "packages": 9,
+    "elements": 83,
+    "relationships": 63,
+    "parts": 16,
+    "value_properties": 29,
+    "ports": 24,
+    "connectors": 12,
+    "bindings": 16,
+    "diagrams": 17
+  },
+  "configuration_slots": 174,
+  "architecture_sha256": "6b2ef3a1c230c80276655c870fcd06564c8198f064ec4218f10c179a10ad95ec"
+}

@@ -1,0 +1,8 @@
+flowchart TD
+    R6["R6 Declared installation interfaces"] -->|"deriveReqt"| N2["N2 Recoverable sortie"]
+    R6 -.->|"trace"| N3["N3 Deployment burden"]
+    R7["R7 Six comparable option records"] -->|"deriveReqt"| N3
+    R8["R8 Reproducible provenance"] -->|"deriveReqt"| N4["N4 Reviewable recommendation"]
+    TC6["TC6 Human interface review"] -.->|"verify intent"| R6
+    TC7["TC7 Output inspection"] -.->|"verify intent"| R7
+    TC8["TC8 Hash and reproduction checks"] -.->|"verify intent"| R8

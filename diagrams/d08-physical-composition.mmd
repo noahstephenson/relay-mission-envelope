@@ -1,0 +1,19 @@
+classDiagram
+    direction LR
+    class SYS["Deployable relay system"]
+    class AIR["Relay aircraft"]
+    class OP["Operator support"]
+    class P1["P1 Battery"]
+    class P2["P2 Distribution and regulation"]
+    class P3["P3 Avionics and carrier radio"]
+    class P4["P4 Propulsion assembly"]
+    class P5["P5 Relay assembly"]
+    class P6["P6 Airframe and mounts"]
+    SYS *-- AIR : aircraft
+    SYS *-- OP : operatorSupport
+    AIR *-- P1 : battery
+    AIR *-- P2 : distribution
+    AIR *-- P3 : avionics
+    AIR *-- P4 : propulsion
+    AIR *-- P5 : relay
+    AIR *-- P6 : structure

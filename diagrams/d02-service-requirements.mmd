@@ -1,0 +1,8 @@
+flowchart TD
+    N1["N1 Sustained service"]
+    R1["R1 Clear paths and adequate link margin"] -->|"deriveReqt"| N1
+    R2["R2 Required energy-supported dwell"] -->|"deriveReqt"| N1
+    TC1["TC1 Geometry and radio checks"] -.->|"verify intent"| R1
+    TC2["TC2 Dwell threshold check"] -.->|"verify intent"| R2
+    P5["P5 Relay assembly"] -.->|"responsibility trace"| R1
+    P1["P1 Battery"] -.->|"resource trace"| R2

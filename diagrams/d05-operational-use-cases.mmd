@@ -1,0 +1,13 @@
+flowchart TD
+    A2["Aircraft operator"] --- UC1(["UC1 Prepare sortie"])
+    A2 --- UC2(["UC2 Establish service"])
+    A2 --- UC4(["UC4 Recover aircraft"])
+    A1["Communications user"] --- UC3(["UC3 Sustain service"])
+    A3["Field support"] --- UC5(["UC5 Restore readiness"])
+    subgraph SYS["Deployable relay capability"]
+      UC1
+      UC2
+      UC3
+      UC4
+      UC5
+    end

@@ -1,0 +1,5 @@
+flowchart TD
+    MD["nonbatteryMass: kg"] ---|"nonbattery"| CB1["CB1 GrossMass: gross = nonbattery + battery + mount"]
+    MB["batteryMass: kg"] ---|"battery"| CB1
+    MM["mountIncrement: kg"] ---|"mount"| CB1
+    CB1 ---|"gross"| MG["grossMass: kg"]

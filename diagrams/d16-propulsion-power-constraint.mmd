@@ -1,0 +1,6 @@
+flowchart LR
+    G["grossMass: kg"] ---|"gross"| CB2["CB2 HoverElectricalPower"]
+    RM["referenceMass: kg"] ---|"referenceMass"| CB2
+    RP["referencePower: W"] ---|"referencePower"| CB2
+    A["powerMultiplier: 1"] ---|"multiplier"| CB2
+    CB2 ---|"hover"| P["hoverPower: W"]

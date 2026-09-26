@@ -1,0 +1,10 @@
+stateDiagram-v2
+    [*] --> Preflight
+    Preflight --> Deploy: Preparation accepted
+    Preflight --> NoDispatch: Gate fails or evidence missing
+    Deploy --> Relay: Station established
+    Deploy --> Recover: Establishment unsuccessful
+    Relay --> Recover: Dwell complete or service ends
+    Recover --> Complete: Recovery completed
+    NoDispatch --> [*]
+    Complete --> [*]

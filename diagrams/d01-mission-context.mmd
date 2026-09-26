@@ -1,0 +1,6 @@
+flowchart TD
+    A["Endpoint A"] -->|"Service traffic"| U["Relay aircraft"]
+    U -->|"Relayed traffic"| B["Endpoint B"]
+    O["Operator support"] <-->|"Carrier command and status"| U
+    S["Field support"] -->|"Battery and payload preparation"| U
+    E["Terrain and atmosphere"] -.->|"Geometry and operating conditions"| U

@@ -1,0 +1,13 @@
+id,name,requirement_text,package_id,evidence_status,config_path
+N1,Sustained service,Provide the requested one-way relay service for the declared dwell.,PK1,analyst-defined need,
+N2,Recoverable sortie,Account for the whole planned sortie and preserve reserve.,PK1,analyst-defined need,
+N3,Deployment burden,Make battery choice and installed mass transparent.,PK1,analyst-defined need,
+N4,Reviewable recommendation,Trace the recommendation to repeatable calculations and assumptions.,PK1,analyst-defined need,
+R1,Clear and adequate service hops,"For each declared service hop, the analysis shall require clearance margin at least 0 m relative to the wall top plus 5 m and link margin at least 10 dB above the -90 dBm assumed receiver threshold.",PK2,conditional calculation,radio.required_margin_db; obstacle.clearance_m
+R2,Requested service duration,"Under the declared continuous-service assumptions, the analysis shall require energy-supported relay dwell of at least mission.dwell_s (baseline 900 s).",PK2,energy proxy; actual service unassessed,mission.dwell_s
+R3,Mission energy and reserve,"For each option, planned mission energy plus reserve shall not exceed nominal_energy_wh times usable_fraction. Reserve is reserve_fraction of usable energy.",PK2,conditional calculation,mission.usable_fraction; mission.reserve_fraction
+R4,Gross mass ceiling,"For each option, installed gross mass shall not exceed vehicle.max_gross_mass_kg (baseline 5.5 kg).",PK2,assumed ceiling,vehicle.max_gross_mass_kg
+R5,Continuous bus power,"For each option, the highest modeled segment bus demand shall not exceed vehicle.continuous_bus_limit_w (baseline 1400 W). Transients remain unassessed.",PK2,assumed ceiling,vehicle.continuous_bus_limit_w
+R6,Declared installation interfaces,"The architecture shall specify I1–I5, their load and connection assumptions, and evidence gaps before a configuration is accepted for physical implementation.",PK2,documentation review pending; hardware unassessed,not applicable
+R7,Comparable alternative records,"The study shall report pack and gross mass, usable and reserve energy, energy margin and maximum supported dwell for each of the six options.",PK2,artifact inspection,batteries; stations
+R8,Reproducible provenance,"Each generated study shall preserve resolved inputs and their SHA-256, state provisional physics and evidence status, and identify the calculation source.",PK2,artifact inspection,provenance

@@ -1,0 +1,581 @@
+{
+  "input_sha256": "c8737d4466ed1a594c961bbae14c2033ff55bd3a7cf313b91aa5b0078b24e12e",
+  "selection_status": "provisional; physics and hardware unreviewed",
+  "selected": "NO_FEASIBLE_OPTION",
+  "nondominated": [],
+  "direct_path": {
+    "distance_m": 1200.0,
+    "fspl_db": 101.635632977068,
+    "received_dbm": -79.635632977068,
+    "link_margin_db": 10.364367022932,
+    "clear": false,
+    "clearance_margin_m": -38.0,
+    "passes": false
+  },
+  "options": [
+    {
+      "option_id": "B1-S1",
+      "battery_mass_kg": 1.0,
+      "mount_delta_kg": 0,
+      "gross_mass_kg": 4.0,
+      "usable_energy_wh": 198.0,
+      "reserve_wh": 39.6,
+      "planned_allowance_wh": 158.4,
+      "mission_energy_wh": 180.26203703703703,
+      "nonservice_energy_wh": 22.262037037037036,
+      "energy_margin_wh": -21.862037037037027,
+      "service_energy_available_wh": 136.13796296296297,
+      "max_energy_dwell_s": 775.4694092827004,
+      "max_bus_power_w": 782.0,
+      "ledger": [
+        {
+          "segment": "climb",
+          "duration_s": 16.666666666666668,
+          "bus_power_w": 782.0,
+          "energy_wh": 3.6203703703703707
+        },
+        {
+          "segment": "outbound",
+          "duration_s": 25.0,
+          "bus_power_w": 692.0,
+          "energy_wh": 4.805555555555555
+        },
+        {
+          "segment": "establish",
+          "duration_s": 30,
+          "bus_power_w": 632.0,
+          "energy_wh": 5.266666666666667
+        },
+        {
+          "segment": "relay",
+          "duration_s": 900,
+          "bus_power_w": 632.0,
+          "energy_wh": 158.0
+        },
+        {
+          "segment": "return",
+          "duration_s": 25.0,
+          "bus_power_w": 692.0,
+          "energy_wh": 4.805555555555555
+        },
+        {
+          "segment": "descent",
+          "duration_s": 25.0,
+          "bus_power_w": 542.0,
+          "energy_wh": 3.763888888888889
+        }
+      ],
+      "hops": [
+        {
+          "distance_m": 254.566297847928,
+          "fspl_db": 88.16802618956112,
+          "received_dbm": -66.16802618956112,
+          "link_margin_db": 23.831973810438882,
+          "clear": true,
+          "clearance_margin_m": null,
+          "passes": true
+        },
+        {
+          "distance_m": 951.211858630873,
+          "fspl_db": 99.61755317482627,
+          "received_dbm": -77.61755317482627,
+          "link_margin_db": 12.38244682517373,
+          "clear": false,
+          "clearance_margin_m": -7.684210526315788,
+          "passes": false
+        }
+      ],
+      "checks": {
+        "R1": false,
+        "R2": false,
+        "R3": false,
+        "R4": true,
+        "R5": true
+      },
+      "min_link_margin_db": 12.38244682517373,
+      "mass_margin_kg": 1.5,
+      "power_margin_w": 618.0,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "unassessed_requirements": [
+        "R6 hardware compatibility"
+      ],
+      "physics_review_status": "pending Michael",
+      "model_domain_status": "within assumed range",
+      "eligible_for_provisional_selection": false
+    },
+    {
+      "option_id": "B1-S2",
+      "battery_mass_kg": 1.0,
+      "mount_delta_kg": 0,
+      "gross_mass_kg": 4.0,
+      "usable_energy_wh": 198.0,
+      "reserve_wh": 39.6,
+      "planned_allowance_wh": 158.4,
+      "mission_energy_wh": 201.10185185185185,
+      "nonservice_energy_wh": 43.101851851851855,
+      "energy_margin_wh": -42.70185185185184,
+      "service_energy_available_wh": 115.29814814814816,
+      "max_energy_dwell_s": 656.7616033755274,
+      "max_bus_power_w": 782.0,
+      "ledger": [
+        {
+          "segment": "climb",
+          "duration_s": 33.333333333333336,
+          "bus_power_w": 782.0,
+          "energy_wh": 7.240740740740741
+        },
+        {
+          "segment": "outbound",
+          "duration_s": 60.0,
+          "bus_power_w": 692.0,
+          "energy_wh": 11.533333333333333
+        },
+        {
+          "segment": "establish",
+          "duration_s": 30,
+          "bus_power_w": 632.0,
+          "energy_wh": 5.266666666666667
+        },
+        {
+          "segment": "relay",
+          "duration_s": 900,
+          "bus_power_w": 632.0,
+          "energy_wh": 158.0
+        },
+        {
+          "segment": "return",
+          "duration_s": 60.0,
+          "bus_power_w": 692.0,
+          "energy_wh": 11.533333333333333
+        },
+        {
+          "segment": "descent",
+          "duration_s": 50.0,
+          "bus_power_w": 542.0,
+          "energy_wh": 7.527777777777778
+        }
+      ],
+      "hops": [
+        {
+          "distance_m": 607.9506558924005,
+          "fspl_db": 95.72937468290915,
+          "received_dbm": -73.72937468290915,
+          "link_margin_db": 16.270625317090847,
+          "clear": true,
+          "clearance_margin_m": 60.0,
+          "passes": true
+        },
+        {
+          "distance_m": 607.9506558924005,
+          "fspl_db": 95.72937468290915,
+          "received_dbm": -73.72937468290915,
+          "link_margin_db": 16.270625317090847,
+          "clear": true,
+          "clearance_margin_m": 60.0,
+          "passes": true
+        }
+      ],
+      "checks": {
+        "R1": true,
+        "R2": false,
+        "R3": false,
+        "R4": true,
+        "R5": true
+      },
+      "min_link_margin_db": 16.270625317090847,
+      "mass_margin_kg": 1.5,
+      "power_margin_w": 618.0,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R2",
+        "R3"
+      ],
+      "unassessed_requirements": [
+        "R6 hardware compatibility"
+      ],
+      "physics_review_status": "pending Michael",
+      "model_domain_status": "within assumed range",
+      "eligible_for_provisional_selection": false
+    },
+    {
+      "option_id": "B1-S3",
+      "battery_mass_kg": 1.0,
+      "mount_delta_kg": 0,
+      "gross_mass_kg": 4.0,
+      "usable_energy_wh": 198.0,
+      "reserve_wh": 39.6,
+      "planned_allowance_wh": 158.4,
+      "mission_energy_wh": 212.33055555555555,
+      "nonservice_energy_wh": 54.330555555555556,
+      "energy_margin_wh": -53.93055555555554,
+      "service_energy_available_wh": 104.06944444444446,
+      "max_energy_dwell_s": 592.8006329113925,
+      "max_bus_power_w": 782.0,
+      "ledger": [
+        {
+          "segment": "climb",
+          "duration_s": 50.0,
+          "bus_power_w": 782.0,
+          "energy_wh": 10.86111111111111
+        },
+        {
+          "segment": "outbound",
+          "duration_s": 70.0,
+          "bus_power_w": 692.0,
+          "energy_wh": 13.455555555555556
+        },
+        {
+          "segment": "establish",
+          "duration_s": 30,
+          "bus_power_w": 632.0,
+          "energy_wh": 5.266666666666667
+        },
+        {
+          "segment": "relay",
+          "duration_s": 900,
+          "bus_power_w": 632.0,
+          "energy_wh": 158.0
+        },
+        {
+          "segment": "return",
+          "duration_s": 70.0,
+          "bus_power_w": 692.0,
+          "energy_wh": 13.455555555555556
+        },
+        {
+          "segment": "descent",
+          "duration_s": 75.0,
+          "bus_power_w": 542.0,
+          "energy_wh": 11.291666666666666
+        }
+      ],
+      "hops": [
+        {
+          "distance_m": 715.4746676158422,
+          "fspl_db": 97.14389328736986,
+          "received_dbm": -75.14389328736986,
+          "link_margin_db": 14.856106712630137,
+          "clear": true,
+          "clearance_margin_m": 88.85714285714283,
+          "passes": true
+        },
+        {
+          "distance_m": 521.4441484953111,
+          "fspl_db": 94.39616402184521,
+          "received_dbm": -72.39616402184521,
+          "link_margin_db": 17.60383597815479,
+          "clear": true,
+          "clearance_margin_m": null,
+          "passes": true
+        }
+      ],
+      "checks": {
+        "R1": true,
+        "R2": false,
+        "R3": false,
+        "R4": true,
+        "R5": true
+      },
+      "min_link_margin_db": 14.856106712630137,
+      "mass_margin_kg": 1.5,
+      "power_margin_w": 618.0,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R2",
+        "R3"
+      ],
+      "unassessed_requirements": [
+        "R6 hardware compatibility"
+      ],
+      "physics_review_status": "pending Michael",
+      "model_domain_status": "within assumed range",
+      "eligible_for_provisional_selection": false
+    },
+    {
+      "option_id": "B2-S1",
+      "battery_mass_kg": 1.7,
+      "mount_delta_kg": 0.1,
+      "gross_mass_kg": 4.8,
+      "usable_energy_wh": 324.0,
+      "reserve_wh": 64.8,
+      "planned_allowance_wh": 259.2,
+      "mission_energy_wh": 234.10416552318722,
+      "nonservice_energy_wh": 28.92404482132742,
+      "energy_margin_wh": 25.09583447681277,
+      "service_energy_available_wh": 230.27595517867258,
+      "max_energy_dwell_s": 1010.0801137647776,
+      "max_bus_power_w": 1017.9006035092989,
+      "ledger": [
+        {
+          "segment": "climb",
+          "duration_s": 16.666666666666668,
+          "bus_power_w": 1017.9006035092989,
+          "energy_wh": 4.712502794024532
+        },
+        {
+          "segment": "outbound",
+          "duration_s": 25.0,
+          "bus_power_w": 899.5925310881831,
+          "energy_wh": 6.247170354779049
+        },
+        {
+          "segment": "establish",
+          "duration_s": 30,
+          "bus_power_w": 820.7204828074391,
+          "energy_wh": 6.8393373567286595
+        },
+        {
+          "segment": "relay",
+          "duration_s": 900,
+          "bus_power_w": 820.7204828074391,
+          "energy_wh": 205.18012070185978
+        },
+        {
+          "segment": "return",
+          "duration_s": 25.0,
+          "bus_power_w": 899.5925310881831,
+          "energy_wh": 6.247170354779049
+        },
+        {
+          "segment": "descent",
+          "duration_s": 25.0,
+          "bus_power_w": 702.4124103863232,
+          "energy_wh": 4.877863961016133
+        }
+      ],
+      "hops": [
+        {
+          "distance_m": 254.566297847928,
+          "fspl_db": 88.16802618956112,
+          "received_dbm": -66.16802618956112,
+          "link_margin_db": 23.831973810438882,
+          "clear": true,
+          "clearance_margin_m": null,
+          "passes": true
+        },
+        {
+          "distance_m": 951.211858630873,
+          "fspl_db": 99.61755317482627,
+          "received_dbm": -77.61755317482627,
+          "link_margin_db": 12.38244682517373,
+          "clear": false,
+          "clearance_margin_m": -7.684210526315788,
+          "passes": false
+        }
+      ],
+      "checks": {
+        "R1": false,
+        "R2": true,
+        "R3": true,
+        "R4": true,
+        "R5": true
+      },
+      "min_link_margin_db": 12.38244682517373,
+      "mass_margin_kg": 0.7000000000000002,
+      "power_margin_w": 382.0993964907011,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R1"
+      ],
+      "unassessed_requirements": [
+        "R6 hardware compatibility"
+      ],
+      "physics_review_status": "pending Michael",
+      "model_domain_status": "within assumed range",
+      "eligible_for_provisional_selection": false
+    },
+    {
+      "option_id": "B2-S2",
+      "battery_mass_kg": 1.7,
+      "mount_delta_kg": 0.1,
+      "gross_mass_kg": 4.8,
+      "usable_energy_wh": 324.0,
+      "reserve_wh": 64.8,
+      "planned_allowance_wh": 259.2,
+      "mission_energy_wh": 261.1866092716092,
+      "nonservice_energy_wh": 56.00648856974943,
+      "energy_margin_wh": -1.9866092716092112,
+      "service_energy_available_wh": 203.19351143025057,
+      "max_energy_dwell_s": 891.2859572441411,
+      "max_bus_power_w": 1017.9006035092989,
+      "ledger": [
+        {
+          "segment": "climb",
+          "duration_s": 33.333333333333336,
+          "bus_power_w": 1017.9006035092989,
+          "energy_wh": 9.425005588049064
+        },
+        {
+          "segment": "outbound",
+          "duration_s": 60.0,
+          "bus_power_w": 899.5925310881831,
+          "energy_wh": 14.993208851469719
+        },
+        {
+          "segment": "establish",
+          "duration_s": 30,
+          "bus_power_w": 820.7204828074391,
+          "energy_wh": 6.8393373567286595
+        },
+        {
+          "segment": "relay",
+          "duration_s": 900,
+          "bus_power_w": 820.7204828074391,
+          "energy_wh": 205.18012070185978
+        },
+        {
+          "segment": "return",
+          "duration_s": 60.0,
+          "bus_power_w": 899.5925310881831,
+          "energy_wh": 14.993208851469719
+        },
+        {
+          "segment": "descent",
+          "duration_s": 50.0,
+          "bus_power_w": 702.4124103863232,
+          "energy_wh": 9.755727922032266
+        }
+      ],
+      "hops": [
+        {
+          "distance_m": 607.9506558924005,
+          "fspl_db": 95.72937468290915,
+          "received_dbm": -73.72937468290915,
+          "link_margin_db": 16.270625317090847,
+          "clear": true,
+          "clearance_margin_m": 60.0,
+          "passes": true
+        },
+        {
+          "distance_m": 607.9506558924005,
+          "fspl_db": 95.72937468290915,
+          "received_dbm": -73.72937468290915,
+          "link_margin_db": 16.270625317090847,
+          "clear": true,
+          "clearance_margin_m": 60.0,
+          "passes": true
+        }
+      ],
+      "checks": {
+        "R1": true,
+        "R2": false,
+        "R3": false,
+        "R4": true,
+        "R5": true
+      },
+      "min_link_margin_db": 16.270625317090847,
+      "mass_margin_kg": 0.7000000000000002,
+      "power_margin_w": 382.0993964907011,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R2",
+        "R3"
+      ],
+      "unassessed_requirements": [
+        "R6 hardware compatibility"
+      ],
+      "physics_review_status": "pending Michael",
+      "model_domain_status": "within assumed range",
+      "eligible_for_provisional_selection": false
+    },
+    {
+      "option_id": "B2-S3",
+      "battery_mass_kg": 1.7,
+      "mount_delta_kg": 0.1,
+      "gross_mass_kg": 4.8,
+      "usable_energy_wh": 324.0,
+      "reserve_wh": 64.8,
+      "planned_allowance_wh": 259.2,
+      "mission_energy_wh": 275.7747123104731,
+      "nonservice_energy_wh": 70.59459160861333,
+      "energy_margin_wh": -16.574712310473103,
+      "service_energy_available_wh": 188.60540839138667,
+      "max_energy_dwell_s": 827.2968500632596,
+      "max_bus_power_w": 1017.9006035092989,
+      "ledger": [
+        {
+          "segment": "climb",
+          "duration_s": 50.0,
+          "bus_power_w": 1017.9006035092989,
+          "energy_wh": 14.137508382073595
+        },
+        {
+          "segment": "outbound",
+          "duration_s": 70.0,
+          "bus_power_w": 899.5925310881831,
+          "energy_wh": 17.49207699338134
+        },
+        {
+          "segment": "establish",
+          "duration_s": 30,
+          "bus_power_w": 820.7204828074391,
+          "energy_wh": 6.8393373567286595
+        },
+        {
+          "segment": "relay",
+          "duration_s": 900,
+          "bus_power_w": 820.7204828074391,
+          "energy_wh": 205.18012070185978
+        },
+        {
+          "segment": "return",
+          "duration_s": 70.0,
+          "bus_power_w": 899.5925310881831,
+          "energy_wh": 17.49207699338134
+        },
+        {
+          "segment": "descent",
+          "duration_s": 75.0,
+          "bus_power_w": 702.4124103863232,
+          "energy_wh": 14.633591883048402
+        }
+      ],
+      "hops": [
+        {
+          "distance_m": 715.4746676158422,
+          "fspl_db": 97.14389328736986,
+          "received_dbm": -75.14389328736986,
+          "link_margin_db": 14.856106712630137,
+          "clear": true,
+          "clearance_margin_m": 88.85714285714283,
+          "passes": true
+        },
+        {
+          "distance_m": 521.4441484953111,
+          "fspl_db": 94.39616402184521,
+          "received_dbm": -72.39616402184521,
+          "link_margin_db": 17.60383597815479,
+          "clear": true,
+          "clearance_margin_m": null,
+          "passes": true
+        }
+      ],
+      "checks": {
+        "R1": true,
+        "R2": false,
+        "R3": false,
+        "R4": true,
+        "R5": true
+      },
+      "min_link_margin_db": 14.856106712630137,
+      "mass_margin_kg": 0.7000000000000002,
+      "power_margin_w": 382.0993964907011,
+      "assessed_gates_pass": false,
+      "failed_requirements": [
+        "R2",
+        "R3"
+      ],
+      "unassessed_requirements": [
+        "R6 hardware compatibility"
+      ],
+      "physics_review_status": "pending Michael",
+      "model_domain_status": "within assumed range",
+      "eligible_for_provisional_selection": false
+    }
+  ]
+}
